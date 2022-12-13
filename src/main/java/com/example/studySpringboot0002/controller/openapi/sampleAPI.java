@@ -18,7 +18,7 @@ import java.net.URLEncoder;
 public class sampleAPI {
 
     /**
-     * api 테스트를 위한 메서드로 코로나 공지사항 데이터를 받는 api 작업 완료
+     * api 테스트를 위한 메서드로 코로나 공지사항 데이터를 받는 api 작업 완료@@@
      * @param model
      * @return
      * @throws Exception

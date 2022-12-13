@@ -65,6 +65,18 @@
 | 시각화 서버(python) |http://192.168.42.100:8100/|김준석|
 | 통계 서버(python)  | http://192.168.42.100:8110/ |김준석|
 
+#### 개발환경
+- spring boot 3.0.0
+- - mysql connector
+- - thymeleaf
+- - lombok
+- - json
+- mysql 
+
+---
+#### developer
+email : js@cleancode.kr
+name : js
 
 ```
 opend : 작성진행요청
