@@ -19,6 +19,7 @@
 ![이미지제목](/src/main/resources/static/img/storyboard.png)
 ---
 #### 클래스 다이어그램
+![이미지제목](/src/main/resources/static/img/storyboard.png)
 
 
 ---
