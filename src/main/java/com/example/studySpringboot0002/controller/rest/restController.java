@@ -13,7 +13,7 @@ import java.util.HashMap;
  * python 서버와 연동하여 데이터 송수신하는 controller
  */
 //@RestController : HTML 파일 경로를 찾지 않고, String 문자열(JSON)로 retrun하는 Controller = @ResponseBody
-@RestController
+@RestController()
 public class restController {
 
 

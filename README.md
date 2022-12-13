@@ -12,7 +12,32 @@
 
 ---
 
-#### 서버 구조
+#### 서버 directory 구조
+
+
+> component
+> > convert : json과 map 자료형 변환 메서드
+
+> controller
+> > graph : graph HTML 이동
+> 
+> > openapi : 공공데이터 혹은 openapi 받는 controller
+> 
+> > rest : 통계서버 (python) 연동하는 api
+
+> entity
+> > example : DB 혹은 데이터 튜플 단위의 자료형 class
+
+> repository
+> > example : JPA를 활용하여 MySQL 연동
+
+> service
+> > example : 실질적인 개발자 코드를 작성하는 영역 (controller와 의존관계)
+
+> temp : 사용하지 않는 코드를 임시 저장
+
+
+#### 관련 서버 구조
 ![이미지제목](/src/main/resources/static/img/structServer.png)
 ---
 #### 스토리 보드
