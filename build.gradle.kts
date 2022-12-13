@@ -19,13 +19,19 @@ repositories {
 }
 
 dependencies {
+	//HTML과 JAVA 연동하는 view 템플릿엔진
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	//자바 언어로 만들어진 웹서비스
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	//getter, setter, 생성자 등 많이 쓰는 코드를 단축시켜주는 어노테이션 모음
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	//JSON
+	//JSON 포맷으로 데이터 받고, 전달하기
 	implementation("org.json:json:20190722")
+	//DB 연동
+	implementation("mysql:mysql-connector-java")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 tasks.withType<Test> {
