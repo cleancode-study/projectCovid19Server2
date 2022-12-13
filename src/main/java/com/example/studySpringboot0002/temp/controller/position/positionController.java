@@ -1,4 +1,4 @@
-package com.example.studySpringboot0002.controller.position;
+package com.example.studySpringboot0002.temp.controller.position;
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.json.JSONObject;

@@ -1,14 +1,14 @@
 #### todoList
 
-| 완료          | 작업내용                       |작업자|
-|-------------|----------------------------|----|
-| closed      | data.go.kr 공공데이터 요청        |김준석|
-| closed      | Java 언어로 api데이터 받기 샘플코드 완성 |김준석|
-| closed      | github가입과 관리               |김준석|
-| in progress |readme.md 개발문서 작성|김준석|
-|open | server0과 server1 @GetMapping 연결 구조 설계 | 김준석|
-|open | 통계용어 정리 및 메서드 추가 1 | 김준석|
-|open | 그래프 그리기 3 | 김준석|
+| 완료     | 작업내용                       |작업자|
+|--------|----------------------------|----|
+| closed | data.go.kr 공공데이터 요청        |김준석|
+| closed | Java 언어로 api데이터 받기 샘플코드 완성 |김준석|
+| closed | github가입과 관리               |김준석|
+| closed |readme.md 개발문서 작성|김준석|
+| open   | server0과 server1 @GetMapping 연결 구조 설계 | 김준석|
+| open   | 통계용어 정리 및 메서드 추가 1 | 김준석|
+| open   | 그래프 그리기 3 | 김준석|
 
 ---
 

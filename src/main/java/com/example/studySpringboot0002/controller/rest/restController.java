@@ -8,9 +8,49 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * server1
+ * python 서버와 연동하여 데이터 송수신하는 controller
+ */
 //@RestController : HTML 파일 경로를 찾지 않고, String 문자열(JSON)로 retrun하는 Controller = @ResponseBody
 @RestController
 public class restController {
+
+
+    /**
+     * put : 데이터 업데이트
+     * @return
+     */
+    @GetMapping("/python/put/id")
+    public Object python_put_id() {
+        return null;
+    }
+
+    /**
+     * get : 데이터 조회
+     * @return
+     */
+    @GetMapping("/python/get/id")
+    public Object python_get_id() {
+        return null;
+    }
+
+    /**
+     * post : 데이터 입력
+     * @return
+     */
+    @GetMapping("/python/post/id")
+    public Object python_post_id() {
+        return null;
+    }
+
+    /**
+     * delete : 데이터 삭제
+     * @return
+     */
+    public Object python_delete_id() {
+        return null;
+    }
 
     @GetMapping("/positionData")
     public Object positionData() {
