@@ -29,7 +29,7 @@ public class sampleAPI {
         urlBuilder.append("&" + URLEncoder.encode("cond[country_iso_alp2::EQ]","UTF-8") + "=" + URLEncoder.encode("KR", "UTF-8")); /*ISO 2자리코드*/
         String codetest = "http://apis.data.go.kr/1262000/CountryCovid19SafetyServiceNew/getCountrySafetyNewsListNew?serviceKey=Io8hL7HgmY2rteFGVOkVQhoA2YFq27cZN3HFt8GS3WqAB1yGjhq3puzw%2FldMoe8YRmmQrDbU5KA4a1vLpaYhjw%3D%3D&stdt=20";
         // 3. URL 객체 생성.
-        URL url = new URL(codetest);
+        URL url = new URL(urlBuilder.toString());
         // 4. 요청하고자 하는 URL과 통신하기 위한 Connection 객체 생성.
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         // 5. 통신을 위한 메소드 SET : HttpURLConnection 타입에 setRequestMethod() 메서드를 사용하여 POST, GET방식 선택 가능
