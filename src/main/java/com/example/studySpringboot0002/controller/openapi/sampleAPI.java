@@ -1,10 +1,16 @@
 package com.example.studySpringboot0002.controller.openapi;
 
 import com.example.studySpringboot0002.entity.openapi.Covid19noti;
+import com.example.studySpringboot0002.repository.openapi.Covid19notiRepository;
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -20,13 +26,20 @@ import java.net.URLEncoder;
 public class sampleAPI {
 
     /**
+     * Repository 연결
+     */
+    @Autowired
+    private Covid19notiRepository covid19notiRepository;
+
+
+    /**
      * api 테스트를 위한 메서드로 코로나 공지사항 데이터를 받는 api 작업 완료@@@
      * @param model
      * @return
      * @throws Exception
      */
     @GetMapping("sampleAPI")
-    public String sampleAPI(Model model) throws Exception {
+    public Object sampleAPI(Model model) throws Exception {
         // 1. URL을 만들기 위한 StringBuilder : 메모리 주소가 1개인 String 변수
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1262000/CountryCovid19SafetyServiceNew/getCountrySafetyNewsListNew"); /*URL*/
         // 2. 오픈 API의 요청 규격에 맞는 파라미터 생성, 발급받은 인증키.
@@ -71,26 +84,67 @@ public class sampleAPI {
         model.addAttribute("result", sb.toString());
 
 
+        //(0)JSON 데이터 만들기 (임의) (JSON API 정상적으로 받을 때 교체)
+        JSONObject test = new JSONObject();
+        //JSONObject는 KEY/VALUE로 구성되어 있는 MAP과 동일하기 때문에 put()으로 데이터 저장
+        test.put("continent_cd", "continent_cd_example");
+        test.put("country_eng_nm", "country_eng_nm_example");
+        test.put("html_origin_cn", "html_origin_cn_example");
+
+        //mission1 : JSONObject를 임의로 3개를 만들고 반복문(for)을 활용하여 DB에 저장하시오
+        //1)JSONObject를 ArrayList에 담아서 하나씩 불러온 뒤에
+        //covid19notiRepository.save(INSTANCE); 실행하기
+
+        
+        //(1)JSON 데이터를 받아와서 get(KEY)으로 인스턴스 인자값 넣기 : 인스턴스 생성자로 데이터 튜플만들기
+        Covid19noti covid19noti = new Covid19noti(
+                10L, test.getString("continent_cd"),
+                test.getString("country_eng_nm"), test.getString("html_origin_cn")
+        );
+        
+        //(2)DB repository에 저장하기 (repository/openapi/Covid19notiRepository 인스턴스 만든 뒤 sampleAPI Controller에서 필드값 주입)
+        covid19notiRepository.save(covid19noti);
+
+
+
+
 
         // String 문자열을 key:value로 되어 있는 JSONObject 타입으로 변환
         JSONObject jObject = new JSONObject(sb.toString());
+        System.out.println("------------");
+        System.out.println(jObject);
+        JSONObject jsonExample = new JSONObject(jObject);
+        System.out.println("------------");
+        System.out.println(jsonExample.length());
+//        JSONArray jsonExample_deptArry = new JSONArray("data");
+//        System.out.println(jsonExample_deptArry);
+//        JSONObject jsonExample_dept1 = new JSONObject("data");
+//        System.out.println("------------");
+//        System.out.println(jsonExample_dept1);
+//        String html_origin_cn = jsonExample_dept1.getString("html_origin_cn");
+//
+//        System.out.println("------------");
+//        System.out.println(html_origin_cn);
 
-        //jObject.getString(KEY) 메서드를 사용하여 KEY값에 있는 value문자열을 String 변수에 저장
-        String currentCount = jObject.getString("currentCount");
-        //String 문자열이 아닌 배열 혹은 KEY VALUE로 되어 있는 데이터 형식 = JSONObject
-        JSONObject data = jObject.getJSONObject("data");
+
+//        jObject.getString(KEY) 메서드를 사용하여 KEY값에 있는 value문자열을 String 변수에 저장
+//        String currentCount = jObject.getString("currentCount");
+//        String 문자열이 아닌 배열 혹은 KEY VALUE로 되어 있는 데이터 형식 = JSONObject
+//        JSONObject data = jObject.getJSONObject("data");
 
         //mission1 : data JSONBoject의 경우 데이터 덩어리가 2개 존재 확인하기
+        //향상된 for문으로 처음부터~끝까지
+
         //data Object를 2개 나누어야 함
         //mission2 : Covid19noti 인스턴스를 2개 만들어서 필드에 데이터 저장
 
         //mission3 : DB
 
-        String continent_cd = jObject.getString("continent_cd");
-        String country_eng_nm = jObject.getString("country_eng_nm");
-        String html_origin_cn = jObject.getString("html_origin_cn");
-
-        Covid19noti covid19noti = new Covid19noti(10L, continent_cd, country_eng_nm, html_origin_cn);
+//        String continent_cd = jObject.getString("continent_cd");
+//        String country_eng_nm = jObject.getString("country_eng_nm");
+//        String html_origin_cn = jObject.getString("html_origin_cn");
+//
+//        Covid19noti covid19noti = new Covid19noti(10L, continent_cd, country_eng_nm, html_origin_cn);
 
 
         return "covid/covid";
