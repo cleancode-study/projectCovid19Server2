@@ -11,9 +11,18 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+/**
+ * openapi : data.go.kr / kakao develop site의 api를 관리하는 controller
+ */
 @Controller
 public class sampleAPI {
 
+    /**
+     * api 테스트를 위한 메서드로 코로나 공지사항 데이터를 받는 api 작업 완료
+     * @param model
+     * @return
+     * @throws Exception
+     */
     @GetMapping("sampleAPI")
     public String sampleAPI(Model model) throws Exception {
         // 1. URL을 만들기 위한 StringBuilder : 메모리 주소가 1개인 String 변수
