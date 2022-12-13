@@ -31,6 +31,8 @@ public class sampleAPI {
     @Autowired
     private Covid19notiRepository covid19notiRepository;
 
+    private static Long count = 0L;
+
 
     /**
      * api 테스트를 위한 메서드로 코로나 공지사항 데이터를 받는 api 작업 완료@@@
@@ -84,38 +86,58 @@ public class sampleAPI {
         model.addAttribute("result", sb.toString());
 
 
-        //(0)JSON 데이터 만들기 (임의) (JSON API 정상적으로 받을 때 교체)
-        JSONObject test = new JSONObject();
-        //JSONObject는 KEY/VALUE로 구성되어 있는 MAP과 동일하기 때문에 put()으로 데이터 저장
-        test.put("continent_cd", "continent_cd_example");
-        test.put("country_eng_nm", "country_eng_nm_example");
-        test.put("html_origin_cn", "html_origin_cn_example");
-
-        //mission1 : JSONObject를 임의로 3개를 만들고 반복문(for)을 활용하여 DB에 저장하시오
-        //1)JSONObject를 ArrayList에 담아서 하나씩 불러온 뒤에
-        //covid19notiRepository.save(INSTANCE); 실행하기
-
-        
-        //(1)JSON 데이터를 받아와서 get(KEY)으로 인스턴스 인자값 넣기 : 인스턴스 생성자로 데이터 튜플만들기
-        Covid19noti covid19noti = new Covid19noti(
-                10L, test.getString("continent_cd"),
-                test.getString("country_eng_nm"), test.getString("html_origin_cn")
-        );
-        
-        //(2)DB repository에 저장하기 (repository/openapi/Covid19notiRepository 인스턴스 만든 뒤 sampleAPI Controller에서 필드값 주입)
-        covid19notiRepository.save(covid19noti);
-
-
-
+//        //(0)JSON 데이터 만들기 (임의) (JSON API 정상적으로 받을 때 교체)
+//        //JSON의 대괄호[]는 배열
+//        //JSON의 중괄호{}는 key/value
+//        JSONObject test = new JSONObject();
+//        //JSONObject는 KEY/VALUE로 구성되어 있는 MAP과 동일하기 때문에 put()으로 데이터 저장
+//        test.put("continent_cd", "continent_cd_example");
+//        test.put("country_eng_nm", "country_eng_nm_example");
+//        test.put("html_origin_cn", "html_origin_cn_example");
+//
+//        //mission1 : JSONObject를 임의로 3개를 만들고 반복문(for)을 활용하여 DB에 저장하시오
+//        //1)JSONObject를 ArrayList에 담아서 하나씩 불러온 뒤에
+//        //covid19notiRepository.save(INSTANCE); 실행하기
+//
+//
+//        for(int i = 0; i<3; i++) {
+//            //(1)JSON 데이터를 받아와서 get(KEY)으로 인스턴스 인자값 넣기 : 인스턴스 생성자로 데이터 튜플만들기
+//            Covid19noti covid19noti = new Covid19noti(
+//                    count, test.getString("continent_cd"),
+//                    test.getString("country_eng_nm"), test.getString("html_origin_cn")
+//            );
+//
+//            //(2)DB repository에 저장하기 (repository/openapi/Covid19notiRepository 인스턴스 만든 뒤 sampleAPI Controller에서 필드값 주입)
+//            covid19notiRepository.save(covid19noti);
+//            count++;
+//        }
 
 
         // String 문자열을 key:value로 되어 있는 JSONObject 타입으로 변환
+        // JSONObject : {} : Key/value : 인자값은 항상 문자열(toString())
         JSONObject jObject = new JSONObject(sb.toString());
         System.out.println("------------");
         System.out.println(jObject);
-        JSONObject jsonExample = new JSONObject(jObject);
-        System.out.println("------------");
-        System.out.println(jsonExample.length());
+        // data라는 key의 value를 바로 array타입으로 저장하기
+        // jObject.getJSONArray(KEY) : jObject 배열 안에 있는 값을 arrayList로 가져오겠다
+        JSONArray jsonExample = jObject.getJSONArray("data");
+//        JSONObject item = new JSONObject(jsonExample.get(0).toString());
+//        System.out.println(item);
+
+        //data key에 저장된 value의 길이만큼 반복문 돌리는 조건문
+        for(int i = 0; i<jsonExample.length(); i++) {
+//            data key에 저장된 배열 안에 있는 값을 JSONObject 타입으로 받아옴 : JSONArray 배열에 안에 있는 값을 다시 문자열(toString())으로 바꾼 뒤에
+            //JSONObject 타입으로 바꿈
+            //배열([])안에 JSONOject({})로 되어 있기 때문에 한 번더 Object로 변환
+            JSONObject item = new JSONObject(jsonExample.get(i).toString());
+
+            Covid19noti covid19noti_example = new Covid19noti(count,
+                    item.getString("continent_eng_nm"),
+                    item.getString("sfty_notice_id"));
+            //받아온 데이터를 DB에 저장
+            covid19notiRepository.save(covid19noti_example);
+            count++;
+        };
 //        JSONArray jsonExample_deptArry = new JSONArray("data");
 //        System.out.println(jsonExample_deptArry);
 //        JSONObject jsonExample_dept1 = new JSONObject("data");

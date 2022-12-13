@@ -14,7 +14,6 @@ public class Covid19noti {
 
     @Id
     private Long id;
-    private String continent_cd;
-    private String country_eng_nm;
-    private String html_origin_cn;
+    private String continent_eng_nm;
+    private String sfty_notice_id;
 }
