@@ -71,7 +71,11 @@
 - - thymeleaf
 - - lombok
 - - json
-- mysql 
+- - JPA
+- mysql 8.0.30
+- HTML 
+- CSS 3.0
+- Javascript EC6
 
 ---
 #### developer
