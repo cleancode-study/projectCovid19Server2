@@ -1,5 +1,7 @@
 package com.example.studySpringboot0002.controller.openapi;
 
+import com.example.studySpringboot0002.entity.openapi.Covid19noti;
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,9 +36,10 @@ public class sampleAPI {
         urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("JSON", "UTF-8")); /*XML 또는 JSON*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과 수*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지 번호*/
-        urlBuilder.append("&" + URLEncoder.encode("cond[country_nm::EQ]","UTF-8") + "=" + URLEncoder.encode("한국", "UTF-8")); /*한글 국가명*/
-        urlBuilder.append("&" + URLEncoder.encode("cond[country_iso_alp2::EQ]","UTF-8") + "=" + URLEncoder.encode("KR", "UTF-8")); /*ISO 2자리코드*/
+        urlBuilder.append("&" + URLEncoder.encode("cond[country_nm::EQ]","UTF-8") + "=" + URLEncoder.encode("일본", "UTF-8")); /*한글 국가명*/
+        urlBuilder.append("&" + URLEncoder.encode("cond[country_iso_alp2::EQ]","UTF-8") + "=" + URLEncoder.encode("JP", "UTF-8")); /*ISO 2자리코드*/
         String codetest = "http://apis.data.go.kr/1262000/CountryCovid19SafetyServiceNew/getCountrySafetyNewsListNew?serviceKey=Io8hL7HgmY2rteFGVOkVQhoA2YFq27cZN3HFt8GS3WqAB1yGjhq3puzw%2FldMoe8YRmmQrDbU5KA4a1vLpaYhjw%3D%3D&stdt=20";
+        System.out.println(urlBuilder);
         // 3. URL 객체 생성.
         URL url = new URL(urlBuilder.toString());
         // 4. 요청하고자 하는 URL과 통신하기 위한 Connection 객체 생성.
@@ -66,6 +69,30 @@ public class sampleAPI {
         // 11. 전달받은 데이터 확인.
         System.out.println(sb.toString());
         model.addAttribute("result", sb.toString());
+
+
+
+        // String 문자열을 key:value로 되어 있는 JSONObject 타입으로 변환
+        JSONObject jObject = new JSONObject(sb.toString());
+
+        //jObject.getString(KEY) 메서드를 사용하여 KEY값에 있는 value문자열을 String 변수에 저장
+        String currentCount = jObject.getString("currentCount");
+        //String 문자열이 아닌 배열 혹은 KEY VALUE로 되어 있는 데이터 형식 = JSONObject
+        JSONObject data = jObject.getJSONObject("data");
+
+        //mission1 : data JSONBoject의 경우 데이터 덩어리가 2개 존재 확인하기
+        //data Object를 2개 나누어야 함
+        //mission2 : Covid19noti 인스턴스를 2개 만들어서 필드에 데이터 저장
+
+        //mission3 : DB
+
+        String continent_cd = jObject.getString("continent_cd");
+        String country_eng_nm = jObject.getString("country_eng_nm");
+        String html_origin_cn = jObject.getString("html_origin_cn");
+
+        Covid19noti covid19noti = new Covid19noti(10L, continent_cd, country_eng_nm, html_origin_cn);
+
+
         return "covid/covid";
     }
 
