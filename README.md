@@ -1,3 +1,6 @@
+#### check list
+- 2022-12-22까지 스토리보드와 개발아키텍처 기획 확인
+
 #### todoList
 
 | 완료     | 작업내용                                              | 완료날짜       |
@@ -44,6 +47,8 @@
 
 > temp : 사용하지 않는 코드를 임시 저장
 
+#### 포트폴리오 개발파트 영역 
+![이미지제목](/src/main/resources/static/img/developPart.png)
 
 #### 관련 서버 구조
 ![이미지제목](/src/main/resources/static/img/structServer.png)
@@ -52,7 +57,7 @@
 ![이미지제목](/src/main/resources/static/img/storyboard.png)
 ---
 #### 클래스 다이어그램
-![이미지제목](/src/main/resources/static/img/storyboard.png)
+![이미지제목](/src/main/resources/static/img/classDiagram.png)
 
 
 ---
