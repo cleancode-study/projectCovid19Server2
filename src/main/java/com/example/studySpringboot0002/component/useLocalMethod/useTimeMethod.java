@@ -10,7 +10,7 @@ public class useTimeMethod {
 
     public static String timeData() {
         LocalDateTime dateTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HHmmss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYYMMddHHmmss");
         String logDate = dateTime.format(formatter);
         return logDate;
     }

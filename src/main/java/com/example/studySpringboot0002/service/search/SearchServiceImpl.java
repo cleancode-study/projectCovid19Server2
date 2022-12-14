@@ -1,7 +1,9 @@
 package com.example.studySpringboot0002.service.search;
 
+import com.example.studySpringboot0002.entity.search.SearchCSV;
 import com.example.studySpringboot0002.entity.search.searchHistory;
-import com.example.studySpringboot0002.repository.search.SearchRepository;
+import com.example.studySpringboot0002.repository.search.SearchCSVRepository;
+import com.example.studySpringboot0002.repository.search.SearchHistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,13 +12,15 @@ import java.util.List;
 @Service
 public class SearchServiceImpl implements SearchService{
 
-    private final SearchRepository searchRepository;
+    private final SearchHistoryRepository searchHistoryRepository;
+    private final SearchCSVRepository searchCSVRepository;
 
     //SearchServiceImpl 클래스는 DB와 연동하기 위해서 SearchRepository JPA(DB연동 드라이버)를 필드로 가짐
     //생성자의 초기값을 통해 필드값을 만듬 (SearchRepository 만들고, SearchServiceImpl를 그 다음에 만드는 순서를 지정하기 위해)
     @Autowired
-    public SearchServiceImpl(SearchRepository searchRepository) {
-        this.searchRepository = searchRepository;
+    public SearchServiceImpl(SearchHistoryRepository searchHistoryRepository, SearchCSVRepository searchCSVRepository) {
+        this.searchHistoryRepository = searchHistoryRepository;
+        this.searchCSVRepository = searchCSVRepository;
     }
 
     /**
@@ -24,7 +28,7 @@ public class SearchServiceImpl implements SearchService{
      */
     @Override
     public void saveSearchHistory(searchHistory input) {
-        this.searchRepository.save(input);
+        this.searchHistoryRepository.save(input);
     }
 
     /**
@@ -35,5 +39,15 @@ public class SearchServiceImpl implements SearchService{
     @Override
     public List<?> getDataTemp() {
         return null;
+    }
+
+    /**
+     * searchSCV 테이블을 모두 조회하여 값을 가져오기
+     *
+     * @return List배열
+     */
+    @Override
+    public List<SearchCSV> findAllSearchSCV() {
+        return searchCSVRepository.findAll();
     }
 }

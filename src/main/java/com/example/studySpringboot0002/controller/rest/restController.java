@@ -1,12 +1,16 @@
 package com.example.studySpringboot0002.controller.rest;
 
 import com.example.studySpringboot0002.entity.example.entityExample;
-import org.springframework.stereotype.Controller;
+import com.example.studySpringboot0002.entity.search.SearchCSV;
+import com.example.studySpringboot0002.service.search.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * server1
@@ -16,6 +20,30 @@ import java.util.HashMap;
 @RestController()
 public class restController {
 
+    private final SearchService searchService;
+
+    @Autowired
+    public restController(SearchService searchService) {
+        this.searchService = searchService;
+    }
+
+    /**
+     * csv 파일 위치를 return하는 메서드
+     * @param csvRequest
+     * @return String(csvLink)
+     */
+    @GetMapping("/csvlink")
+    public String scvlink(@RequestParam(value = "csvRequest")String csvRequest) {
+        //http://localhost:8090/csvlink?csvRequest=covid19
+        String resutText = "null";
+        List<SearchCSV> result = searchService.findAllSearchSCV();
+        for(SearchCSV item : result) {
+            if(item.getSubject().equals(csvRequest)) {
+                resutText = item.getCsvURL();
+            }
+        }
+        return resutText;
+    }
 
     /**
      * put : 데이터 업데이트

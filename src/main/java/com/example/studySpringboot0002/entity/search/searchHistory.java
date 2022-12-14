@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class searchHistory {
 
+    //@GeneratedValue DB table의 기본키를 자동생성 해주는 어노테이션
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

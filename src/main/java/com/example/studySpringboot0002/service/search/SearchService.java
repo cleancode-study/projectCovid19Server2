@@ -1,5 +1,6 @@
 package com.example.studySpringboot0002.service.search;
 
+import com.example.studySpringboot0002.entity.search.SearchCSV;
 import com.example.studySpringboot0002.entity.search.searchHistory;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +18,10 @@ public interface SearchService {
      * @return List
      */
     List<?> getDataTemp();
+
+    /**
+     * searchSCV 테이블을 모두 조회하여 값을 가져오기
+     * @return List배열
+     */
+    List<SearchCSV> findAllSearchSCV();
 }
