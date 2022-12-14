@@ -13,7 +13,7 @@
 | closed | DB에 데이터 저장하기 sample                               | 2022-12-13 |
 | closed | DB에 데이터 불러오기 1 (data.go.kr 데이터)                   | 2022-12-14 |
 | open   | CSV web link 불러와서 URL 주소 전달하는 @RestController 만들기 | 2022-12-14 |
-| open   | DB에 검색내용, IP, 시간을 저장하는 Entity Table만들기            | 2022-12-14 |
+| closed | DB에 검색내용, IP, 시간을 저장하는 Entity Table만들기            | 2022-12-14 |
 | open   | -                                                 | -          |
 | open   | 시각화 HTML 만들기 1,2 (migration)                      | 2022-12-15 |
 | open   | 시각화 페이지 URL 전달하는 API 만들기                          | -          |
