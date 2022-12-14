@@ -11,7 +11,7 @@
 | closed | readme.md 개발문서 작성                                 | 2022-12-13 |
 | closed | server0과 server1 @GetMapping 연결 구조 설계             | 2022-12-13 |
 | closed | DB에 데이터 저장하기 sample                               | 2022-12-13 |
-| open   | DB에 데이터 불러오기 1 (data.go.kr 데이터)                   | 2022-12-14 |
+| closed | DB에 데이터 불러오기 1 (data.go.kr 데이터)                   | 2022-12-14 |
 | open   | CSV web link 불러와서 URL 주소 전달하는 @RestController 만들기 | 2022-12-14 |
 | open   | DB에 검색내용, IP, 시간을 저장하는 Entity Table만들기            | 2022-12-14 |
 | open   | -                                                 | -          |

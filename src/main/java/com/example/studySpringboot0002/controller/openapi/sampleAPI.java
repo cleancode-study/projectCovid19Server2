@@ -2,19 +2,16 @@ package com.example.studySpringboot0002.controller.openapi;
 
 import com.example.studySpringboot0002.entity.openapi.Covid19noti;
 import com.example.studySpringboot0002.repository.openapi.Covid19notiRepository;
+import com.example.studySpringboot0002.service.openapi.DatagokrService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -28,10 +25,27 @@ public class sampleAPI {
     /**
      * Repository 연결
      */
-    @Autowired
-    private Covid19notiRepository covid19notiRepository;
+    private final Covid19notiRepository covid19notiRepository;
+    private final DatagokrService datagokrService;
+
+
 
     private static Long count = 0L;
+
+    @Autowired
+    public sampleAPI(Covid19notiRepository covid19notiRepository,
+                     DatagokrService datagokrService
+    ) {
+        this.covid19notiRepository = covid19notiRepository;
+        this.datagokrService = datagokrService;
+    }
+
+    @GetMapping("read/Covid19noti")
+    public String read_covid19noti(Model model) {
+        model.addAttribute("result", datagokrService.getCovid19noti());
+        return "resultDB/covid19noti";
+    }
+
 
 
     /**
