@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class SearchServiceImpl implements SearchService{
 
     private final SearchHistoryRepository searchHistoryRepository;
     private final SearchCSVRepository searchCSVRepository;
+
 
     //SearchServiceImpl 클래스는 DB와 연동하기 위해서 SearchRepository JPA(DB연동 드라이버)를 필드로 가짐
     //생성자의 초기값을 통해 필드값을 만듬 (SearchRepository 만들고, SearchServiceImpl를 그 다음에 만드는 순서를 지정하기 위해)
