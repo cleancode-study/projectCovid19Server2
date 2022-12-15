@@ -2,6 +2,7 @@ package com.example.studySpringboot0002.controller.rest;
 
 import com.example.studySpringboot0002.entity.example.entityExample;
 import com.example.studySpringboot0002.entity.search.SearchCSV;
+import com.example.studySpringboot0002.repository.openapi.Covid19notiRepository;
 import com.example.studySpringboot0002.service.search.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

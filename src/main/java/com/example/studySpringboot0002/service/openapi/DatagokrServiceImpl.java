@@ -11,6 +11,7 @@ import java.util.List;
 public class DatagokrServiceImpl implements DatagokrService {
 
 
+
     private final Covid19notiRepository covid19notiRepository;
 
     //이 클래스를 사용할려면 미리 필드값을 만들어져 있어야하는 어노테이션
