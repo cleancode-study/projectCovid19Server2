@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!--    progress-->
+    <link rel="stylesheet" type="text/css" href="/css/progress_bar_example.css">
 </head>
 <body>
-  hello world
+<!--
+- header 영역
+- display : flex; justify-content: space-evenly;
+-->
+<div class="header_example" style="
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+">
+    <div style="
+    height: 100%;
+    width: 40%;
+    ">
+        <div>
+            <form action="/search" method="post">
+                <input th:type="text" name="search">
+                <button>검색하기</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--
+- main 영역
+- display : flex; justify-content: space-evenly;
+-->
+<div class="main_example" style="
+    height: 500px;
+    width: 800px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+">
+    <!--
+    - tuple 영역 : main 영역의 한 줄
+    - display : flex;
+    -->
+    <div class="tuple_example" style="
+    height: 50%;
+    background-color:red;
+    width: 100%;
+    display:flex;
+    ">
+        <!--
+        - column 영역 : main 영역의 tuple 영역의 한 칸
+        - display : flex;
+        -->
+        <div class="column_example" style="
+                background-color:black;
+                width: 50%;
+        ">
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+
+        </div>
+        <div class="column_example" style="
+                background-color:gray;
+                width: 50%;
+        ">
+
+        </div>
+    </div>
+    <div class="tuple_example" style="
+    height: 50%;
+    background-color:red;
+    width: 100%;
+    display:flex;
+    ">
+        <div class="column_example" style="
+                background-color:white;
+                width: 50%;
+        ">
+
+        </div>
+        <div class="column_example" style="
+                background-color:red;
+                width: 50%;
+        ">
+
+        </div>
+
+    </div>
+
+</div>
+
+
 </body>
 </html>
