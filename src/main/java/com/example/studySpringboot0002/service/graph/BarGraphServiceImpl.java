@@ -10,7 +10,7 @@ public class BarGraphServiceImpl implements BarGraphService {
      * @return String타입
      */
     @Override
-    public String getBarGraph2Data() {
-        return "50";
+    public String getBarGraph2Data(int wdith) {
+        return "wdith:"+Integer.toString(wdith);
     }
 }

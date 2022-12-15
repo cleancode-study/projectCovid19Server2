@@ -11,5 +11,5 @@ public interface BarGraphService {
      * barGraph2 HTML에 전달할 데이터 연산 메서드
      * @return String타입
      */
-    String getBarGraph2Data();
+    String getBarGraph2Data(int wdith);
 }
