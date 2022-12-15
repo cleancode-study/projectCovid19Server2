@@ -35,11 +35,35 @@ public class barGraphController {
         return "graph/barGraph1";
     }
 
-    @GetMapping("barGraph2")
+    @GetMapping("barGraph3")
+    public String barGraph3() {
+        return "graph/barGraph3";
+    }
+
+    @GetMapping("barGraph4")
+    public String barGraph4() {
+        return "graph/barGraph4";
+    }
+
+    @GetMapping("exampleGraph")
+    public String exampleGraph() {
+        return "graph/exampleGraph";
+    }
+
+
+    @GetMapping("barGraph")
     public String barGraph2(Model model) {
         //model : 장바구니 : HTML에 데이터 전달하는 장바구니 (KEY, VALUE로 되어 있어서, key값을 호출하면 value를 얻을 수 있음)
         //addAttribute() : key, value 값을 넣는 메서드
         model.addAttribute("data", barGraphService.getBarGraph2Data());
-        return "graph/barGraph2";
+
+        //mission : @service에서 데이터를 받아서 controller model에 데이터를 넣고,
+        // css / javascript 타임리프 문법으로 데이터를 넣어서 그래프를 완성하시오
+        //css : <div th:attrappend="style=${data}"></div> : 속성=속성값 모두 문자열로 전달해야 함
+        //javascript :
+        //    /*<![CDATA[*/
+        //        trace1.x = /*[[${xdata1}]]*/
+        //    /*]]>*/
+        return "index";
     }
 }

@@ -4,12 +4,11 @@ body {
   background: #000;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   padding: 0;
   margin: 0;
 }
 
-.progress {
+.progress_bar1 {
   background: rgba(255,255,255,0.1);
   justify-content: flex-start;
   border-radius: 100px;
@@ -21,7 +20,7 @@ body {
   width: 380px;
 }
 
-.progress-value {
+.progress_bar1-value {
   animation: load 3s normal forwards;
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
