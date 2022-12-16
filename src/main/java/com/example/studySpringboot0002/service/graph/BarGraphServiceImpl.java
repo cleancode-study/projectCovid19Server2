@@ -11,6 +11,6 @@ public class BarGraphServiceImpl implements BarGraphService {
      */
     @Override
     public String getBarGraph2Data(int wdith) {
-        return "wdith:"+Integer.toString(wdith);
+        return "wdith:"+Integer.toString(wdith)+"px";
     }
 }

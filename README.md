@@ -1,14 +1,33 @@
+#### project info
+- Springboot에서 CSV 및 URL 관리, HTML 그래프
+- Flask에서 데이터 통계(CSV) 정리 및 저장 (Pandas, Requests)
+
+
+- Python언어로 컨텐츠 통계 및 데이터저장(CSV) 작업을 하고, 
+- Github에 CSV파일 업로드와 Springboot DB에 URL주소 전달 <-> Flask는 Springboot에 CSV주소 수신
+- 코로나 데이터로 Pandas의 통계, sklean의 모델링, openCV 데이터 분석, tenserflow의 모델사용 
+
 #### check list
 - 2022-12-22까지 스토리보드와 개발아키텍처 기획 확인
 
 #### git command
-git add . : 개인컴퓨터 폴더에 있는 코드의 기록을 추가하겠다
-git commit -m "MESSAGE" : 위에 있는 기록을 확정한다 + 코멘트
-git push origin main : 개인컴퓨터에 있는 코드 기록(git)을 서버(github)에 올린다
-git pull : 서버(github)에 있는 코드기록을 개인컴퓨터에 다운 받아서 최신 버전으로 적용시킨다
+- git add . : 개인컴퓨터 폴더에 있는 코드의 기록을 추가하겠다
+- git commit -m "MESSAGE" : 위에 있는 기록을 확정한다 + 코멘트
+- git push origin main : 개인컴퓨터에 있는 코드 기록(git)을 서버(github)에 올린다
+- git pull : 서버(github)에 있는 코드기록을 개인컴퓨터에 다운 받아서 최신 버전으로 적용시킨다
 
 #### 용어집
-migration : 기존 솔루션 혹은 코드를 새로운 서버에 이전 하는 작업
+- migration : 기존 솔루션 혹은 코드를 새로운 서버에 이전 하는 작업
+- request : 요청. 시작 서버(client)에서 특정 문자열로 요청하는 하는 행위 (parameter 지정하여 전달 가능)
+- response : 응답. request로 요청을 하면 return받는 데이터
+- @Controller : spring의 route(경로, 분기점 지정) : 외부에서 요청이 오면 어디로 갈지 지정
+- @Service : spring의 비즈니스 로직(개발자가 만들고 싶은 컨텐츠)을 담당하는 영역
+- Repository : DB와 spring을 연결하는 영역
+- JPA : 객체지향 프로그래밍 방식을 SQL문으로 번역하여 적용(전달), Entity(Instance) = tuple
+- DI : Dependency Injection : 의존성 주입 : 의존하는 객체를 주입하여 관리
+- DI 전략 : 필드 주입방식, setter메서드 주입방식, 생성자 주입방식 중 
+- 생성자 주입방식이 의존하는 객체의 생성 순번을 지정할 수 있기 때문에 권장
+- IoC : Inversion of Control : 제어의 역전 : DI개념을 개발자가 아닌 프로그램(spring)에서 제어하는 역전 현상
 
 #### todoList
 
@@ -27,13 +46,30 @@ migration : 기존 솔루션 혹은 코드를 새로운 서버에 이전 하는 
 | In Progress | 시각화 HTML 만들기 1,2 (migration:이동)                   | 2022-12-15 |
 | closed      | flask과 springboot 연동                              | 2022-12-15 |
 | open        | -                                                 | -          |
-| open        | 시각화 페이지 URL 전달하는 API 만들기 (route)                  | 2022-12-16 |
+| open        | 시각화 페이지 URL 전달하는 API 만들기 (route CSV)              | 2022-12-16 |
+| open        | 포트폴리오 목록 정하기 / 개발자 용어 정리                          | 2022-12-16 |
 | open        | 시각화 HTML 만들기 3 (그래프 그리기)                          | 2022-12-16 |
+| open        | -                                                 | -          |
+| open        | -                                                 | -          |
 
 ---
 
+#### Student toDoList
+| 학생명 | 프로젝트 제목                 | 작업목록      |
+|-----|-------------------------|-----------|
+| 박성현 | 서울 전기차 충전소 인프라 구축 데이터베이스 | 데이터 분석 작업 |
+| 성하늘 | 게임 전적 통계 서비스 구축                        | HTML 작성 중 |
+| 강수희 | 일본 관광객과 엔화와의 관계성 통계             | 데이터 활용    |
+| 이수지 | -   | - |
+| 송지선 | 날씨에 따른 소비 패턴 | - |
+| 박태식 | python 프로젝트 | - |
+| 조예찬 | 전자책(도서)의 통계 | - |
+| 윤승원 | backend 프로젝트 | - |
+| 이지현 | 가계부 솔루션 (spring) | - |
+| 김지혁 | backend 프로젝트 | - |
+| 장영훈 | 기존 프로젝트를 서비스를 제공 (backend) | - |
+                      
 #### 서버 directory 구조
-
 
 > component
 > > convert : json과 map 자료형 변환 메서드

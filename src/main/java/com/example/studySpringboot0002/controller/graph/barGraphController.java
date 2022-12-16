@@ -51,11 +51,17 @@ public class barGraphController {
     }
 
 
+    /**
+     *
+     * @param model
+     * @return
+     */
     @GetMapping("barGraph")
     public String barGraph2(Model model) {
         //model : 장바구니 : HTML에 데이터 전달하는 장바구니 (KEY, VALUE로 되어 있어서, key값을 호출하면 value를 얻을 수 있음)
         //addAttribute() : key, value 값을 넣는 메서드
         model.addAttribute("bargraph2value", barGraphService.getBarGraph2Data(50));
+        model.addAttribute("linear_graph_value", "200");
 
         //mission : @service에서 데이터를 받아서 controller model에 데이터를 넣고,
         // css / javascript 타임리프 문법으로 데이터를 넣어서 그래프를 완성하시오

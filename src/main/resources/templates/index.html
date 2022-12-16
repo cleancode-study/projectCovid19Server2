@@ -64,27 +64,39 @@
                 flex-direction: row;
                 justify-content: center;
         ">
+            <!--
+            - column 영역 : main 영역의 tuple 영역의 column 영역
+            - display : flex;
+            -->
             <div style="
                     display: flex;
                     flex-direction: column;
             ">
-            <div class="progress_bar1">
-                <div class="progress_bar1-value"></div>
-            </div>
-            <div class="progress_bar1">
-                <div class="progress_bar1-value"></div>
-            </div>
-            <div class="progress_bar1">
-                <div class="progress_bar1-value"></div>
-            </div>
+                <!--
+                - progress_bar 영역 : row 한 줄 영역
+                -->
+                <div class="progress_bar1">
+                    <div class="progress_bar1-value"></div>
+                </div>
+                <div class="progress_bar1">
+                    <div class="progress_bar1-value"></div>
+                </div>
+                <div class="progress_bar1">
+                    <div class="progress_bar1-value"></div>
+                </div>
             </div>
         </div>
         <div class="column_example" style="
                 width: 50%;
         ">
+            <!--
+            - progress_bar 영역 : 입체 progress_bar 모형 영역
+            -->
             <div class="progress_bar2_wrapper">
                 <div class="progress_bar2_progressbar">
-
+                    <!--
+                    - progress_bar 영역 : 입체 progress_bar 모형의 한 면 영역
+                    -->
                     <div class="progress_bar2_side progress_bar2_side__front">
                         <div class="progress_bar2_side__fill" th:attrappend="style=${bargraph2value}"></div>
                     </div>
@@ -111,18 +123,35 @@
     justify-content: center;
     ">
         <div style="">
+            <!--
+            - plotly 영역 : plotly 라이브러리 활용 script에 연동되는 div
+            -->
             <div id="myDiv"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="tuple_example" style="
+    height: 130%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    ">
+        <div style="">
+            <!--
+            - plotly 영역 : plotly 라이브러리 활용 script에 연동되는 div
+            -->
+            <div id="myDiv_linear_graph_example"></div>
         </div>
     </div>
 
 </div>
 
 <script th:inline="javascript">
-/*<![CDATA[*/
-    console.log(/*[[${data}]]*/);
+    console.log(/*[[${linear_graph_value}]]*/);
         function makeTrace(i) {
     return {
-        y: /*[[${data}]]*/,
+        y: /*[[${linear_graph_value}]]*/,
         line: {
             shape: 'spline' ,
             color: 'red'
@@ -171,7 +200,36 @@ Plotly.newPlot('myDiv', [0, 1, 2, 3].map(makeTrace), {
         }]
     }],
 });
-/*]]>*/
+
+
+
+var linear_trace1 = {
+  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  y: [8, 7, 6, 5, 4, 3, 2, 1, 0],
+  type: 'scatter'
+};
+
+var linear_trace2 = {
+  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  y: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  type: 'scatter'
+};
+
+var linear_data = [linear_trace1, linear_trace2];
+
+var linear_layout = {
+  xaxis: {
+    type: 'log',
+    autorange: true
+  },
+  yaxis: {
+    type: 'log',
+    autorange: true
+  }
+};
+
+Plotly.newPlot('myDiv_linear_graph_example', linear_data, linear_layout);
+
     </script>
 </body>
 </html>
