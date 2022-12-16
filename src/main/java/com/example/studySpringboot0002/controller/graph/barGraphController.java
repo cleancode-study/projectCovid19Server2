@@ -60,6 +60,11 @@ public class barGraphController {
      */
     @GetMapping("barGraph")
     public String barGraph2(Model model) {
+
+        model.addAttribute("progress_bar_frame_option", "animation: load50 3s normal forwards");
+
+        model.addAttribute("progress_bar_frame_option_test", "animation: load100 3s normal forwards");
+
         //model : 장바구니 : HTML에 데이터 전달하는 장바구니 (KEY, VALUE로 되어 있어서, key값을 호출하면 value를 얻을 수 있음)
         //addAttribute() : key, value 값을 넣는 메서드
         model.addAttribute("bargraph2value", barGraphService.getBarGraph2Data(50));
@@ -70,6 +75,9 @@ public class barGraphController {
         model.addAttribute("linear_trace1_y_value", barGraphService.getLinear_graph2_y_value());
         model.addAttribute("linear_trace2_x_value", barGraphService.getLinear_graph2_y_value());
         model.addAttribute("linear_trace2_y_value", barGraphService.getLinear_graph2_x_value());
+
+
+
 
 
         //mission : @service에서 데이터를 받아서 controller model에 데이터를 넣고,

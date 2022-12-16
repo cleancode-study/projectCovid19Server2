@@ -14,14 +14,14 @@ public interface SearchService {
     void saveSearchHistory(searchHistory input);
 
     /**
-     * 검색 내용에 맞춰 데이터 출력 (예정)
+     * 검색 내용에 맞춰 데이터 출력 (검색기록)
      * @return List
      */
-    List<?> getDataTemp();
+    List<searchHistory> findAllSearchHistory();
 
     /**
      * searchSCV 테이블을 모두 조회하여 값을 가져오기
      * @return List배열
      */
-    List<SearchCSV> findAllSearchSCV();
+    List<SearchCSV> findAllSearchCSVUrl();
 }

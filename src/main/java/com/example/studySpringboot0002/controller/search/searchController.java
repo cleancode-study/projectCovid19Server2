@@ -19,7 +19,6 @@ import static com.example.studySpringboot0002.component.useLocalMethod.useTimeMe
 public class searchController {
 
     private final SearchService searchService;
-    private static Long index;
 
     @Autowired
     public searchController(SearchService service) {
@@ -37,6 +36,11 @@ public class searchController {
         //httpServletRequest : 클라이언트의 정보를 받는 객체 192.168.48.100 (ipv4) >> (ipv6)
 //        System.out.println(httpServletRequest.getRemoteAddr());
         this.searchService.saveSearchHistory(new searchHistory(searchData, httpServletRequest.getRemoteAddr(), timeData()));
+
+        //url출력
+        model.addAttribute("searchCSVUrl", this.searchService.findAllSearchCSVUrl());
+        //검색기록 출력
+        model.addAttribute("searchHistory",this.searchService.findAllSearchHistory());
 
         return "resultDB/search";
     }

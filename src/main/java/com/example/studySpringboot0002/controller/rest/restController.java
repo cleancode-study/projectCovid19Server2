@@ -37,7 +37,7 @@ public class restController {
     public String scvlink(@RequestParam(value = "csvRequest")String csvRequest) {
         //http://localhost:8090/csvlink?csvRequest=covid19
         String resutText = "null";
-        List<SearchCSV> result = searchService.findAllSearchSCV();
+        List<SearchCSV> result = searchService.findAllSearchCSVUrl();
         for(SearchCSV item : result) {
             if(item.getSubject().equals(csvRequest)) {
                 resutText = item.getCsvURL();

@@ -32,14 +32,15 @@ public class SearchServiceImpl implements SearchService{
     }
 
     /**
-     * 검색 내용에 맞춰 데이터 출력 (예정)
+     * 검색 내용에 맞춰 데이터 출력 (검색기록)
      *
      * @return List
      */
     @Override
-    public List<?> getDataTemp() {
-        return null;
+    public List<searchHistory> findAllSearchHistory() {
+        return searchHistoryRepository.findAll();
     }
+
 
     /**
      * searchSCV 테이블을 모두 조회하여 값을 가져오기
@@ -47,7 +48,7 @@ public class SearchServiceImpl implements SearchService{
      * @return List배열
      */
     @Override
-    public List<SearchCSV> findAllSearchSCV() {
+    public List<SearchCSV> findAllSearchCSVUrl() {
         return searchCSVRepository.findAll();
     }
 }
