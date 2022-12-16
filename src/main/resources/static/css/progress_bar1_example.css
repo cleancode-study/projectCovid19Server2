@@ -26,7 +26,7 @@ body {
   border-radius: 100px;
   background: #fff;
   height: 30px;
-  width: 0;
+  width: 20px;
 }
 
 @keyframes load {

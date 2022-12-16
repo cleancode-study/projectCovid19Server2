@@ -149,17 +149,17 @@
 
 <script th:inline="javascript">
     console.log(/*[[${linear_graph_value}]]*/);
-        function makeTrace(i) {
-    return {
-        y: /*[[${linear_graph_value}]]*/,
-        line: {
-            shape: 'spline' ,
-            color: 'red'
-        },
-        visible: i === 0,
-        name: 'Data set ' + i,
-    };
-}
+    function makeTrace(i) {
+        return {
+            y: /*[[${linear_graph_value}]]*/,
+            line: {
+                shape: 'spline' ,
+                color: 'red'
+            },
+            visible: i === 0,
+            name: 'Data set ' + i,
+        };
+    }
 
 Plotly.newPlot('myDiv', [0, 1, 2, 3].map(makeTrace), {
     updatemenus: [{
@@ -204,14 +204,14 @@ Plotly.newPlot('myDiv', [0, 1, 2, 3].map(makeTrace), {
 
 
 var linear_trace1 = {
-  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-  y: [8, 7, 6, 5, 4, 3, 2, 1, 0],
+  x: /*[[${linear_trace1_x_value}]]*/,
+  y: /*[[${linear_trace1_y_value}]]*/,
   type: 'scatter'
 };
 
 var linear_trace2 = {
-  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-  y: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  x: /*[[${linear_trace2_x_value}]]*/,
+  y: /*[[${linear_trace2_y_value}]]*/,
   type: 'scatter'
 };
 
