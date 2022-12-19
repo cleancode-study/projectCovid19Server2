@@ -28,8 +28,11 @@
 - DI 전략 : 필드 주입방식, setter메서드 주입방식, 생성자 주입방식 중 
 - 생성자 주입방식이 의존하는 객체의 생성 순번을 지정할 수 있기 때문에 권장
 - IoC : Inversion of Control : 제어의 역전 : DI개념을 개발자가 아닌 프로그램(spring)에서 제어하는 역전 현상
+- JSON : Javascript Object - : 데이터 전달 포맷 (KEY:VALUE) = map = dictionary
+- List : 배열
+- Map : key:value
 
-- 정적타입 : 동적타입과 다르게 변수에 타입 스타일을 지정하는 방식
+- 정적타입 : 동적타입과 다르게 변수에 타입 스타일을 지정하는 방식 : 파이썬의 typehint도 유사
 - Class와 Instance : 설계도와 찍어낸 객체
 - 상속 : 부모 객체의 모든 자원을 물려받기
 - 추상클래스 : 클래스 + 인스턴스 만들어야 기능을 하는 클래스
@@ -39,9 +42,6 @@
 
 - Despatcher Servlet : 클라이언트의 요청을 안내하는 에스코트 서블릿
 - @RequestParam : 클라이언트의 Key값을 찾아 연결하는 어노테이션
-- JSON : 
-- List :
-- Map :
 
 #### todoList
 
@@ -63,8 +63,11 @@
 | closed | 포트폴리오 목록 정하기 / 개발자 용어 정리                          | 2022-12-16 |
 | closed | 시각화 HTML 만들기 3 (그래프 그리기)                          | 2022-12-16 |
 | open   | -                                                 | -         |
+| open   | CSS/border를 활용한 대시보드 정리                           | 2022-12-19         |
+| open   | collection framwork 데이터 타입 정립 (java = python)     | 2022-12-19         |
 | open   | pandas 활용하여 데이터 전처리                               | 2022-12-19 |
-| open   | 통계 데이터를 받아서 spring 그래프 출력하기                       | 2022-12-19   |
+| open   | -                                                 | -         |
+| open   | 시계열 분석이 완료된 통계 데이터를 받아서 spring 그래프 출력하기           | 2022-12-19   |
 | open   | Dash example                                      | 2022-12-20 |
 | open   | 검색 내용 출력 기능                                       | 2022-12-20 |
 | open   | 코로나 그래프 만들기 1                                     | 2022-12-21 |
