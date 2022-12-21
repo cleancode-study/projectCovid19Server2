@@ -57,6 +57,7 @@
   - 다차원 적도법
 - 공간 시각화 기법 : 지도
 
+### 그래프 샘플
 - 비교 : 막대, 버블
 - 추이 : 선, 영역, 타임라인
 ![비교추이](/src/main/resources/static/img/Compare_Transition.png)
@@ -184,6 +185,11 @@
   - 이미지 업로드/다운로드
     - https://www.youtube.com/watch?v=7dmwTbSiudw
   - 차순위 : 세션과 쿠키와 (교과서 part7)시큐리티, jwt활용
+- nextjs 13 기본인프라
+  - 구조
+    - https://youtu.be/pRoway0ktZQ
+  - 레이어 표현
+    - https://youtu.be/ZyZFU_6lAWc
 - 인공지능 기본인프라
   - 추후 보강
 - 인공지능을 위한 통계
