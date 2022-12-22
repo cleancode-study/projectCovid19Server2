@@ -66,6 +66,22 @@
 - 지도 : 필드, 심볼, 플로우
 ![비교추이](/src/main/resources/static/img/ImportanceRelationshipMap.png)
 
+### 다중 피처 그래프 예제
+- (통계그래프)
+*산점도, 선차트, 영역차트
+x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
+
+*다중 회귀 차원 그래프
+3차원이상 회귀 데이터 출력
+![비교추이](/src/main/resources/static/img/multi_regression1.png)
+![비교추이](/src/main/resources/static/img/multi_regression2.png)
+![비교추이](/src/main/resources/static/img/multi_regression3.png)
+
+- (개인별 그래프)
+*네트워크 그래프 : 클라이언트의 특정 질병에 적용되는 변수(요인)과 수치를 표현
+
+*파이차트, 와플차트, 트리맵, 히트맵 (적합치 않음) : 특정 카테고리(10세 아동 등)의 분류를 지정해야 함
+
 #### 스케쥴
 - 2022-12-22까지 [주제]기획 결정 (개발환경 작성)
 - 2022-12-23까지 솔루션 아키텍처(flask의 @route, spring의 @controller, repository) 구성
