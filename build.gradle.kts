@@ -32,6 +32,10 @@ dependencies {
 	//DB 연동
 	implementation("mysql:mysql-connector-java")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	//jsoup : use scraping
+	implementation("org.jsoup:jsoup:1.13.1")
+	//Selenium
+	implementation("org.seleniumhq.selenium:selenium-java")
 }
 
 tasks.withType<Test> {
