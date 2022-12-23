@@ -8,6 +8,7 @@
     <!--    progress_bar2-->
     <link rel="stylesheet" type="text/css" href="/css/progress_bar2.css">
     <!--    plotly chart-->
+    <link rel="stylesheet" type="text/css" href="/css/option_3d.css">
     <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
 </head>
 <body>
@@ -17,19 +18,29 @@
 -->
 <div class="header_example" style="
     height: 50px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
 ">
     <div style="
     height: 100%;
-    width: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     ">
         <div>
             <form action="/search" method="post">
                 <input th:type="text" name="search">
                 <button>검색하기</button>
             </form>
+        </div>
+        <div>
+            <button style="opacity: 0.5; border-radius: 50%;">Button 1</button>
+            <button style="opacity: 0.5; border-radius: 50%;">Button 2</button>
+            <button style="opacity: 0.5; border-radius: 50%;">Button 3</button>
         </div>
     </div>
 </div>
@@ -45,6 +56,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 ">
+
     <!--
     - tuple 영역 : main 영역의 한 줄
     - display : flex;
@@ -146,8 +158,37 @@
     </div>
 
 </div>
+<hr>
+<div class="tuple_example" style="
+    height: 130%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    ">
+    <div style="">
+        <!--
+        - plotly 영역 : plotly 라이브러리 활용 script에 연동되는 div
+        -->
+        <div id="myDiv_3d"></div>
+    </div>
+</div>
+
+</div>
 
 <script th:inline="javascript">
+    var data_3dgraph=[
+        {
+        opacity:0.8,
+        color:'rgb(300,100,200)',
+        type: 'scatter3d',
+        x: /*[[${linear_trace1_x_value}]]*/,
+        y: /*[[${linear_trace1_y_value}]]*/,
+        z: /*[[${linear_trace2_x_value}]]*/,
+        }
+    ];
+    Plotly.newPlot('myDiv_3d', data_3dgraph);
+
     console.log(/*[[${linear_graph_value}]]*/);
     function makeTrace(i) {
         return {
