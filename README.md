@@ -1,5 +1,6 @@
-[클릭](#test-index) 테스트
-[클릭](#그래프-샘플) 테스트
+# 목차
+- [project info](#project-info)
+- [그래프 샘플](#그래프-샘플)
 
 #### project info
 - Springboot에서 CSV 및 URL 관리, HTML 그래프
@@ -61,7 +62,6 @@
 - 공간 시각화 기법 : 지도
 
 
-#test index
 
 ### 그래프 샘플
 - 비교 : 막대, 버블
@@ -125,7 +125,6 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 - git push origin main : 개인컴퓨터에 있는 코드 기록(git)을 서버(github)에 올린다
 - git pull : 서버(github)에 있는 코드기록을 개인컴퓨터에 다운 받아서 최신 버전으로 적용시킨다
 
-#그래프 샘플
 
 #### 용어집
 - migration : 기존 솔루션 혹은 코드를 새로운 서버에 이전 하는 작업
