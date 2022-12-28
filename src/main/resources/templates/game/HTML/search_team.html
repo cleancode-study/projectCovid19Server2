@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/search_team.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="/JS/search_team.js"></script>
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- 헤더 -->
+        <!-- 어디에서나 볼 수 있어야 하는 것 -->
+        <div class="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="/HTML/main.html"><span class="material-icons">palette</span></a>
+                <a class="logo_word" href="/HTML/main.html">League</a>
+            </div>
+            <!-- 메인 메뉴 -->
+            <div class="main_menu">
+                <div class="league_duration"><a href="/HTML/league_duration.html">격전 기간</a></div>
+                <div class="league_reword"><a href="/HTML/league_reword.html">격전 보상</a></div>
+                <div class="record"><a href="/HTML/record.html">전적 검색</a></div>
+                <div class="search_team"><a href="/HTML/search_team.html">팀 찾기</a></div>
+            </div>
+        </div>
+
+        <!-- 메인 -->
+        <div class="main">
+            <!-- 팀 검색 -->
+            <section class="search_tm_mb">
+
+                <!-- 메뉴 이동 버튼 -->
+                <!-- 팀 찾기 검색 필터 -->
+                <!-- 빈 1.라인(모두, 둘 중 하나)  2.티어(~부터 ~까지) 선택 -->
+                <ul class="menu_list">
+                    <li class="search_team on">팀 찾기</li>
+                    <div class="search_team_filter">
+                        <div class="position_filter">
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="TOP">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="JG">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="MID">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="AD">  
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="SUP">
+                            </div>
+                        </div>
+                        <div class="tear_filter">
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/340be6a1fb6082196ba60f06cdc09a49b8b3c24fcbfb25c3a4c662f7a3694c1d9f8c34971dc1f43acdfa5bfca83712abbfe0374a4a6f3e150fb6a34a24edceaf0e79cb7ef3f55ba67725a0746962babc1514b7f319e8ddea197791b4e777d5a162220a6632f971d1e8f5afe1f7d7c389" alt="IRON">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/b89919f45033b44d0bdcad53e0c0bb9e15cbc6dd350f531ff9f942c7bef359b9d01610e65da3c42b01e9c9fac9478b69069267d5607a1c515b900bc11b0524088f31497f21076ccf53121892f41025b212caf2da1b062239f16cf0e673699d66ebfadf6df527675d6518c90e09a681c7" alt="BRONZE">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/179040ee1c3dbe35e9bed76bca97c9e0a9b5117b46554776da8d96761acfaaecd7a70057ed5c7ded39d194b605fab3b49229a4273183514db479fe07f0862cba965ca36eef29455c1b3ae8077bea8b656345947bfbaeb0f0275d43f623e146532dbc7cb55eb61f357d207c37d72031c1" alt="SILVER">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/abeaf2f0b5d768c53969e9521c98b2aa29114408f8a07c27c18a30fd591a77380e619e3335fa318b7f8ff3bbe85583cccddfa29e9af10000d19e0a76c0a0b0dbd824d6589469377114a183ddeeaf5f45f5b22734ab0fede8d637e299f425569dd1b7b338f7c1092b46b6445b926fe69c" alt="GOLD">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/2f83f4960d96080c1c2642b7b5664f19d3d9d2ab271cf89db89ad88a5831f91c22b90a2c2d3b7af3866a52fcaa46cacd7436c06ca7fcc48d74d78e5f6e2a39e70055cf6e4928b0f916f6bae2f647559062a12ce43b1ddcf476fcc385d897a335281d74feae2b7f0d87ef9f2d4263a310" alt="PLATINUM">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/55dc97ca02199f5dfd84d1cf0e409aa6fa8bf7020e3a0839ecbddbaf7d51a4b80746e53ca58f408e917f3812fefa313ffea7f0cb41b0913ba4dc3f281c66eaaa2dc4a7bb8e3be0f7369b39b2a2643a94601494deab2f394d47c866821d583be74836c0b19705a88a33998113b316188f" alt="DIAMOND">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/358d032d9a6e848af160625e09bc03b6c78720c6d37bab34d116cadc34b19fcc3b9184e4f7a54f291b9dcecdee9403914c5fd0db2a1d0b3254203f3882a523d8f93e515838edb057e86d1c37eb24a0a84fdd83cf3cd0c1508a07df02bc27d462ecbd4602efa092a4acb87016fd1ec6aa" alt="MASTER">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/bb8a12ce30bfe299374977073e2212d3c0155f9f990b3d4aa834b6051b3f728177222fc4847734d1af7e07c04f55dd749b0417220f97bde4412c6296a074a13e199b7bc8e9d19341b1348b82ab279c94b245a4ccae705db5242e73b46e2e4f42f3e316d5dc6b9fd9e577fe646933f0ff" alt="GRANDMSTER">
+                            </div>
+                            <div class="filter_img_box off">
+                                <img src="https://w.namu.la/s/4d93befe1316cdd16dfde107cde15db8f6f1a7ff19a293ad6c67b51a9af79527261c199feb22417c12c4b17a9155d206752bb09f6f1bb83e7fa4fe782751631162c8a5341d7a51d51d15f4d6302b790a0b1eab848e1ab15102edabd46c89dc6b1f616dbd3f99054dd3284086d681bd09" alt="CHALLENGER">
+                            </div>
+                        </div>
+                    </div>
+                    <li class="search_member off">팀원 찾기</li>
+                    <div class="search_member_filter">
+                        팀원 필터
+                    </div>
+                </ul>
+
+                <!-- 메뉴 선택에 따라 달라지는 출력 공간 -->
+                <div class="menu_open">
+                    <!-- 팀 찾기 / 구직 -->
+                    <div class="search_tm on">
+                        <ul class="team_list">
+                            <li>
+                                <div class="team_box">
+                                    <div class="team_info">
+                                        <div class="team_chief">
+                                            <p>팀 리더</p>
+                                            <div>명예로운 소환사999</div>
+                                        </div>
+                                        <div class="memo">
+                                            <p>메모</p>
+                                            <div class="memo_inside">
+                                                탑, 미드, 원딜 찾습니다.
+                                                라인 주도권 잡고 정글이랑 돌아다닐 미드 찾습니다.
+                                                유틸 서포터 선호하는 원딜 찾습니다.
+                                            </div>
+                                        </div>
+                                        <div class="time">
+                                            <p>등록 일시</p>
+                                            <div>5분전</div>
+                                        </div>
+                                    </div>
+                                    <div class="member_info">
+                                        <div class="top inner_box">
+                                            <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                            <div class="inner_index">
+                                                <div class="position">포지션</div>
+                                                <div class="user_name">유저네임</div>
+                                                <div class="winning_rate">승률</div>
+                                                <div class="kda">KDA</div>
+                                                <div class="most_champ">모스트3</div>
+                                            </div>
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>TOP</p>
+                                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jg inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>JG</p>
+                                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mid inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>MID</p>
+                                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ad inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>AD</p>
+                                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sup inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>SUP</p>
+                                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team_box">
+                                    <div class="team_info">
+                                        <div class="team_chief">
+                                            <p>팀 리더</p>
+                                            <div>명예로운 소환사999</div>
+                                        </div>
+                                        <div class="memo">
+                                            <p>메모</p>
+                                            <div class="memo_inside">
+                                                탑, 미드, 원딜 찾습니다.
+                                                라인 주도권 잡고 정글이랑 돌아다닐 미드 찾습니다.
+                                                유틸 서포터 선호하는 원딜 찾습니다.
+                                            </div>
+                                        </div>
+                                        <div class="time">
+                                            <p>등록 일시</p>
+                                            <div>5분전</div>
+                                        </div>
+                                    </div>
+                                    <div class="member_info">
+                                        <div class="top inner_box">
+                                            <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                            <div class="inner_index">
+                                                <div class="position">포지션</div>
+                                                <div class="user_name">유저네임</div>
+                                                <div class="winning_rate">승률</div>
+                                                <div class="kda">KDA</div>
+                                                <div class="most_champ">모스트3</div>
+                                            </div>
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>TOP</p>
+                                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jg inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>JG</p>
+                                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mid inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>MID</p>
+                                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ad inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>AD</p>
+                                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sup inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>SUP</p>
+                                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team_box">
+                                    <div class="team_info">
+                                        <div class="team_chief">
+                                            <p>팀 리더</p>
+                                            <div>명예로운 소환사999</div>
+                                        </div>
+                                        <div class="memo">
+                                            <p>메모</p>
+                                            <div class="memo_inside">
+                                                탑, 미드, 원딜 찾습니다.
+                                                라인 주도권 잡고 정글이랑 돌아다닐 미드 찾습니다.
+                                                유틸 서포터 선호하는 원딜 찾습니다.
+                                            </div>
+                                        </div>
+                                        <div class="time">
+                                            <p>등록 일시</p>
+                                            <div>5분전</div>
+                                        </div>
+                                    </div>
+                                    <div class="member_info">
+                                        <div class="top inner_box">
+                                            <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                            <div class="inner_index">
+                                                <div class="position">포지션</div>
+                                                <div class="user_name">유저네임</div>
+                                                <div class="winning_rate">승률</div>
+                                                <div class="kda">KDA</div>
+                                                <div class="most_champ">모스트3</div>
+                                            </div>
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>TOP</p>
+                                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jg inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>JG</p>
+                                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mid inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>MID</p>
+                                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ad inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>AD</p>
+                                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sup inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>SUP</p>
+                                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team_box">
+                                    <div class="team_info">
+                                        <div class="team_chief">
+                                            <p>팀 리더</p>
+                                            <div>명예로운 소환사999</div>
+                                        </div>
+                                        <div class="memo">
+                                            <p>메모</p>
+                                            <div class="memo_inside">
+                                                탑, 미드, 원딜 찾습니다.
+                                                라인 주도권 잡고 정글이랑 돌아다닐 미드 찾습니다.
+                                                유틸 서포터 선호하는 원딜 찾습니다.
+                                            </div>
+                                        </div>
+                                        <div class="time">
+                                            <p>등록 일시</p>
+                                            <div>5분전</div>
+                                        </div>
+                                    </div>
+                                    <div class="member_info">
+                                        <div class="top inner_box">
+                                            <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                            <div class="inner_index">
+                                                <div class="position">포지션</div>
+                                                <div class="user_name">유저네임</div>
+                                                <div class="winning_rate">승률</div>
+                                                <div class="kda">KDA</div>
+                                                <div class="most_champ">모스트3</div>
+                                            </div>
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>TOP</p>
+                                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jg inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>JG</p>
+                                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mid inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>MID</p>
+                                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ad inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>AD</p>
+                                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sup inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>SUP</p>
+                                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team_box">
+                                    <div class="team_info">
+                                        <div class="team_chief">
+                                            <p>팀 리더</p>
+                                            <div>명예로운 소환사999</div>
+                                        </div>
+                                        <div class="memo">
+                                            <p>메모</p>
+                                            <div class="memo_inside">
+                                                탑, 미드, 원딜 찾습니다.
+                                                라인 주도권 잡고 정글이랑 돌아다닐 미드 찾습니다.
+                                                유틸 서포터 선호하는 원딜 찾습니다.
+                                            </div>
+                                        </div>
+                                        <div class="time">
+                                            <p>등록 일시</p>
+                                            <div>5분전</div>
+                                        </div>
+                                    </div>
+                                    <div class="member_info">
+                                        <div class="top inner_box">
+                                            <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                            <div class="inner_index">
+                                                <div class="position">포지션</div>
+                                                <div class="user_name">유저네임</div>
+                                                <div class="winning_rate">승률</div>
+                                                <div class="kda">KDA</div>
+                                                <div class="most_champ">모스트3</div>
+                                            </div>
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>TOP</p>
+                                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jg inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>JG</p>
+                                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mid inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>MID</p>
+                                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ad inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>AD</p>
+                                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sup inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>SUP</p>
+                                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team_box">
+                                    <div class="team_info">
+                                        <div class="team_chief">
+                                            <p>팀 리더</p>
+                                            <div>명예로운 소환사999</div>
+                                        </div>
+                                        <div class="memo">
+                                            <p>메모</p>
+                                            <div class="memo_inside">
+                                                탑, 미드, 원딜 찾습니다.
+                                                라인 주도권 잡고 정글이랑 돌아다닐 미드 찾습니다.
+                                                유틸 서포터 선호하는 원딜 찾습니다.
+                                            </div>
+                                        </div>
+                                        <div class="time">
+                                            <p>등록 일시</p>
+                                            <div>5분전</div>
+                                        </div>
+                                    </div>
+                                    <div class="member_info">
+                                        <div class="top inner_box">
+                                            <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                            <div class="inner_index">
+                                                <div class="position">포지션</div>
+                                                <div class="user_name">유저네임</div>
+                                                <div class="winning_rate">승률</div>
+                                                <div class="kda">KDA</div>
+                                                <div class="most_champ">모스트3</div>
+                                            </div>
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>TOP</p>
+                                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jg inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>JG</p>
+                                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mid inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>MID</p>
+                                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ad inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>AD</p>
+                                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sup inner_box">
+                                            <div class="inner_content">
+                                                <div class="position">
+                                                    <p>SUP</p>
+                                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="포지션 아이콘">
+                                                </div>
+                                                <div class="user_name">
+                                                    명예로운 소환사명1
+                                                </div>
+                                                <div class="winning_rate">
+                                                    <div class="win_bar">
+                                                        <div class="win_percent"></div>
+                                                    </div>
+                                                    <div class="win_num">90%</div>
+                                                </div>
+                                                <div class="kda">
+                                                    1 / 0 / 11
+                                                </div>
+                                                <div class="most_champ">
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                                    </div>
+                                                    <div class="img_box">
+                                                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                                    </div>  
+                                                    <div class="img_box">
+                                                        <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 팀원 찾기 / 구인 -->
+                    <div class="search_mem off">
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <!-- 포지션 + 닉네임 + 승률 + kda + 모스트3 -->
+                                    <div class="inner_index">
+                                        <div class="position">포지션</div>
+                                        <div class="user_name">유저네임</div>
+                                        <div class="winning_rate">승률</div>
+                                        <div class="kda">KDA</div>
+                                        <div class="most_champ">모스트3</div>
+                                        <div class="memo_some">메모</div>
+                                        <div class="entry_tm">등록시간</div>
+                                    </div>
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="summoner_info">
+                                <div class="inner_box">
+                                    <div class="inner_content">
+                                        <div class="position">
+                                            <p>TOP</p>
+                                            <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="포지션 아이콘">
+                                        </div>
+                                        <div class="user_name">
+                                            명예로운 소환사명1
+                                        </div>
+                                        <div class="winning_rate">
+                                            <div class="win_bar">
+                                                <div class="win_percent"></div>
+                                            </div>
+                                            <div class="win_num">90%</div>
+                                        </div>
+                                        <div class="kda">
+                                            1 / 0 / 11
+                                        </div>
+                                        <div class="most_champ">
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                            </div>
+                                            <div class="img_box">
+                                                <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                            </div>  
+                                            <div class="img_box">
+                                                <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                            </div>
+                                        </div>
+                                        <div class="memo_box">
+                                            듀오돌릴 원딜구함
+                                        </div>
+                                        <div class="time_box">
+                                            5분전
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+
+                </li>
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <!-- 저작권 -->
+            <div class="copyright">
+                <p>Copyright &copy; All rights reserved AoiSkyI.</p>
+            </div>
+            <!-- 연락처 -->
+            <div class="connect">
+                <p>Github | aoiskyi</p>
+                <p>Email | sunghl0508@naver.com</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

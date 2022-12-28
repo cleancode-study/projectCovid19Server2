@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/league_reword.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- 헤더 -->
+        <!-- 어디에서나 볼 수 있어야 하는 것 -->
+        <div class="header" id="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="/HTML/main.html"><span class="material-icons">palette</span></a>
+                <a class="logo_word" href="/HTML/main.html">League</a>
+            </div>
+            <!-- 메인 메뉴 -->
+            <div class="main_menu">
+                <div class="league_duration"><a href="/HTML/league_duration.html">격전 기간</a></div>
+                <div class="league_reword"><a href="/HTML/league_reword.html">격전 보상</a></div>
+                <div class="record"><a href="/HTML/record.html">전적 검색</a></div>
+                <div class="search_team"><a href="/HTML/search_team.html">팀 찾기</a></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <!-- 보상 목록 -->
+            <!-- 앵커로 이동하도록 -->
+            <aside>
+                <div class="sub_menu">
+                    <button>
+                        <a href="#header">
+                            <span class="material-icons">expand_less</span>
+                        </a>
+                    </button>
+                    <div><a href="#trophy">트로피</a></div>
+                    <div><a href="#victory_point">승리 포인트</a></div>
+                    <div><a href="#capsule_sphere">구 및 캡슐</a></div>
+                    <div><a href="#season_reword">시즌 보상</a></div>
+                    <button>
+                        <a href="#footer">
+                            <span class="material-icons">expand_more</span>
+                        </a>
+                    </button>
+                </div>
+            </aside>
+
+            <section class="reword_detail">
+
+                <!-- 트로피 -->
+                <div id="trophy">
+                    <h1>| 트로피</h1>
+                    <div class="trohpy_img">
+                        <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360002386187/Clash_Trophies.jpg" alt="trohpy">
+                    </div>
+                    <p>대진에서 승리하면 토너먼트 테마 트로피를 획득합니다.</p>
+                    <table class="trohpy_table">
+                        <caption>트로피 유지기간 / 확인 가능 위치 / 대상</caption>
+                        <tr>
+                            <th>트로피 유지기간</th>
+                            <th>확인 가능 위치</th>
+                            <th>대상</th>
+                        </tr>
+                        <tr>
+                            <td>토너먼트 종료 후 2주</td>
+                            <td>모든 소환사의 협곡 넥서스 옆 / 내정보 페이지</td>
+                            <td>소환사가 획득한 가장 높은 레벨의 트로피</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 승리 포인트 -->
+                <div id="victory_point">
+                    <h1>| 승리 포인트</h1>
+                    <div class="victory_point_img">
+                        <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360002363768/Demacia_Banners.jpg" alt="휘장">
+                    </div>
+                    <P>
+                        격전에서 승리할 때마다 200 VP를 획득합니다.<br>
+                        획득하는 VP는 속한 팀의 티어와 사용한 티켓 종류에 따라 달라질 수 있습니다.<br>
+                        3티어부터는 격전 기간 중 매일 한 번 첫 승리 VP를 추가로 획득합니다.
+                    </P>
+                    <table class="first_victory">
+                        <caption>최소 승리 추가 VP</caption>
+                        <tr>
+                            <th>티어</th>
+                            <th>최초 승리 추가 VP 보상</th>
+                        </tr>
+                        <tr>
+                            <td>1티어</td>
+                            <td>격전 최소 승리시 150 VP</td>
+                        </tr>
+                        <tr>
+                            <td>2티어</td>
+                            <td>격전 최소 승리시 100 VP</td>
+                        </tr>
+                        <tr>
+                            <td>3티어</td>
+                            <td>격전 최소 승리시 50 VP</td>
+                        </tr>
+                        <tr>
+                            <td>4티어</td>
+                            <td>없음</td>
+                        </tr>
+                    </table>
+                    <p>
+                        VP는 해당 격전 테마 기간에만 유지되며 쌓은 VP에 따라 휘장과 팀 아이콘을 획득할 수 있습니다.
+                        획득한 휘장은 모든 소환사의 협곡 게임에서 자신이 선택한 공격로에 장식됩니다.
+                    </p>
+                    <table class="vp_reword">
+                        <caption>승리 포인트 보상</caption>
+                        <tr>
+                            <th>승리 포인트</th>
+                            <th>보상</th>
+                        </tr>
+                        <tr>
+                            <td>400 VP</td>
+                            <td>휘장 1레벨</td>
+                        </tr>
+                        <tr>
+                            <td>600 VP</td>
+                            <td>테마 로고1</td>
+                        </tr>
+                        <tr>
+                            <td>1000 VP</td>
+                            <td>휘장 2레벨</td>
+                        </tr>
+                        <tr>
+                            <td>1,400 VP</td>
+                            <td>휘장 3레벨</td>
+                        </tr>
+                        <tr>
+                            <td>2,000 VP</td>
+                            <td>테마 로고2</td>
+                        </tr>
+                    </table>
+                    <p>
+                        또한 휘장을 수집한 개수에 따라 휘장을 고정하는 테두리가 업그레이드됩니다.
+                    </p>
+                    <table class="insignia">
+                        <caption>휘장 테두리</caption>
+                        <tr>
+                            <th>레벨</th>
+                            <th>보유 휘장수</th>
+                            <th>이미지</th>
+                        </tr>
+                        <tr>
+                            <td>1레벨</td>
+                            <td>1</td>
+                            <td><img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360065481574/blobid0.png" alt="1레벨 휘장"></td>
+                        </tr>
+                        <tr>
+                            <td>2레벨</td>
+                            <td>4</td>
+                            <td><img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360066489893/blobid1.png" alt="2레벨 휘장"></td>
+                        </tr>
+                        <tr>
+                            <td>3레벨</td>
+                            <td>6</td>
+                            <td><img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360066489933/blobid2.png" alt="3레벨 휘장"></td>
+                        </tr>
+                        <tr>
+                            <td>4레벨</td>
+                            <td>10</td>
+                            <td><img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360065481694/blobid3.png" alt="4레벨 휘장"></td>
+                        </tr>
+                        <tr>
+                            <td>5레벨</td>
+                            <td>15</td>
+                            <td><img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360065481754/blobid4.png" alt="5레벨 휘장"></td>
+                        </tr>
+                    </table>
+                </div>
+                <p></p>
+
+                <!-- 구 및 캡슐 보상 -->
+                <div id="capsule_sphere">
+                    <h1>| 구 및 캡슐</h1>
+                    <div class="capsule_sphere_img">
+                        <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360065487894/blobid5.png" alt="격전 구">
+                        <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/360065487914/blobid6.png" alt="격전 캡슐">
+                    </div>
+                    <p>
+                        격전에 참가한 모든 플레이어는 대진 결과에 따라 격전의 구 또는 격전 캡슐을 획득합니다.<br>
+                        보상은 사용한 티켓 종류 및 최종 순위에 따라 달라집니다.
+                    </p>
+
+                    <!-- 기본 티켓 보상 -->
+                    <table class="normal_ticket">
+                        <caption>기본 티켓: 976 BE / 195 RP</caption>
+                        <tr>
+                            <th class="grade">등수</th>
+                            <th class="explain">기본 티켓: 격전의 구</th>
+                        </tr>
+                        <tr>
+                            <td class="grade">8등</td>
+                            <td class="explain">로고 1개 + 3승 경험치 부스트</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">7등</td>
+                            <td class="explain">로고 1개 + 수수께끼 아이콘</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">6등</td>
+                            <td class="explain">로고 1개 + 수수께끼 아이콘</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">5등</td>
+                            <td class="explain">로고 1개 + 수수께끼 아이콘 + 640 RP 와드 스킨</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">4등</td>
+                            <td class="explain">로고 1개 + 수수께끼 아이콘 + 640 RP 와드 스킨 + 수수께끼 감정표현</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">3등</td>
+                            <td class="explain">로고 1개 + 수수께끼 아이콘 + 640 RP 와드 스킨 + 수수께끼 감정표현 + 기본 티켓 1개</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">등2</td>
+                            <td class="explain">로고 1개 + 수수께끼 아이콘 + 640 RP 와드 스킨 + 수수께끼 감정표현 + 기본 티켓 1개 + 975RP 스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">1등</td>
+                            <td class="explain">로고 1개 + 미니 아이콘 1개 + 640 RP 와드 스킨 + 수수께끼 감정표현 + 기본 티켓 1개 + 975RP 스킨 파편 + 1,350RP 스킨 파편</td>
+                        </tr>
+                    </table>
+                    <!-- 프리미엄 티켓 보상 -->
+                    <table class="primium_ticket">
+                        <caption>프리미엄 티켓: 975 RP</caption>
+                        <tr>
+                            <th class="grade">등수</th>
+                            <th class="explain">프리미엄 티켓: 캡슐</th>
+                        </tr>
+                        <tr>
+                            <td class="grade">8등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 500개 + 750 RP 스킨 파편 + 로고 1개</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">7등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 500개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">6등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 500개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">5등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 750개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편 + 1,350 RP 스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">4등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 750개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편 + 1,350 RP 스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">3등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 750개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편 + 1,350 RP 스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">2등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 750개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편 + 1,350 RP 스킨 파편 + 1,820 RP 스킨 파편</td>
+                        </tr>
+                        <tr>
+                            <td class="grade">1등</td>
+                            <td class="explain">기본 티켓 1개 + 수황 정수 750개 + 750 RP 스킨 파편 + 로고 1개 + 975 RP  스킨 파편 + 1,350 RP 스킨 파편 + 1,820 RP 스킨 파편 + 미니 아이콘 1개 + 신화 정수 10개 + 온전한 1,350 RP 스킨</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 시즌 보상 -->
+                <div id="season_reword">
+                    <h1>| 격전 시즌 보상</h1>
+                    <table class="season_reword_table">
+                        <P>각 보상 단계는 이전 단계의 모든 보상을 포함합니다.</P>
+                        <tr>
+                            <th>보상 단계</th>
+                            <th>획득 VP</th>
+                            <th>보상</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">
+                                도전자 보상<br>
+                                <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10793456493075" alt="도전자 보상">
+                                <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10793550305171" alt="도전자 보상">
+                            </td>
+                            <td>100 VP</td>
+                            <td>도전자 소환사 아이콘</td>
+                        </tr>
+                        <tr>
+                            <td>400 VP</td>
+                            <td>도전자 격전 로고</td>
+                        </tr>
+                        <tr>
+                            <td>1,000 VP</td>
+                            <td>도전자 격전 휘장</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">
+                                정복자 보상<br>
+                                <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10793457183379" alt="정복자 보상">
+                                <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10793550798483" alt="정복자 보상">
+                            </td>
+                            <td>2,000 VP</td>
+                            <td>정복자 소환사 아이콘</td>
+                        </tr>
+                        <tr>
+                            <td>3,000 VP</td>
+                            <td>정복자 격전 로고</td>
+                        </tr>
+                        <tr>
+                            <td>4,0000 VP</td>
+                            <td>정복자 격전 휘장</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">
+                                챔피언 보상<br>
+                                <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10793457663891" alt="챔피언 보상">
+                                <img src="https://support-leagueoflegends.riotgames.com/hc/article_attachments/10793551221395" alt="챔피언 보상">
+                            </td>
+                            <td>5,000 VP</td>
+                            <td>챔피언 소환사 아이콘</td>
+                        </tr>
+                        <tr>
+                            <td>6,000 VP</td>
+                            <td>챔피언 격전 로고</td>
+                        </tr>
+                        <tr>
+                            <td>7,0000 VP</td>
+                            <td>챔피언 격전 휘장</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer" id="footer">
+            <!-- 저작권 -->
+            <div class="copyright">
+                <p>Copyright &copy; All rights reserved AoiSkyI.</p>
+            </div>
+            <!-- 연락처 -->
+            <div class="connect">
+                <p>Github | aoiskyi</p>
+                <p>Email | sunghl0508@naver.com</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -32,8 +32,12 @@
             </table>
         </div>
 
-
-
-
+<form action="/financial_day" method="post">
+    start day : <input th:type="text" name="start_day">
+    end day : <input th:type="text" name="end_day">
+    <button>검색하기</button>
+</form>
+특정 범위에 금액 출력
+<p th:text="${financialData}"></p>
 </body>
 </html>

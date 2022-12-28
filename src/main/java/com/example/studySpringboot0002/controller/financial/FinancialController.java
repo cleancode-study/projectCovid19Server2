@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import static com.example.studySpringboot0002.component.useLocalMethod.useTimeMethod.timeData;
@@ -27,6 +28,21 @@ public class FinancialController {
     @Autowired
     public FinancialController(FinancialExample financialExample) {
         this.financialExample = financialExample;
+    }
+
+    /**
+     *
+     * @param model financialList : 특정 요일 사이의 데이터 출력
+     * @return
+     */
+    @PostMapping("financial_day")
+    public String financial_day(@RequestParam(value = "start_day", required = false)String start_day,
+                                @RequestParam(value = "end_day", required = false)String end_day,
+                                Model model ) {
+        String returndata = "";
+        returndata = this.financialExample.BetwinDayFinancialData(start_day, end_day);
+        model.addAttribute("financialData", returndata);
+        return "financial/financial_index";
     }
 
     /**

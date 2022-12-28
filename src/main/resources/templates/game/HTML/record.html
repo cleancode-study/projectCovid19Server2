@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/record.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- 헤더 -->
+        <!-- 어디에서나 볼 수 있어야 하는 것 -->
+        <div class="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="/HTML/main.html"><span class="material-icons">palette</span></a>
+                <a class="logo_word" href="/HTML/main.html">League</a>
+            </div>
+            <!-- 메인 메뉴 -->
+            <div class="main_menu">
+                <div class="league_duration"><a href="/HTML/league_duration.html">격전 기간</a></div>
+                <div class="league_reword"><a href="/HTML/league_reword.html">격전 보상</a></div>
+                <div class="record"><a href="/HTML/record.html">전적 검색</a></div>
+                <div class="search_team"><a href="/HTML/search_team.html">팀 찾기</a></div>
+            </div>
+        </div>
+
+        <!-- 메인 -->
+        <!-- section>article, aside>article -->
+        <div class="main">
+            <!-- 기록 조회 -->
+            <section class="search">
+                <div class="search_box">
+                    <div class="copy">
+                        <div class="red">RED TEAM</div>
+                        <div class="vs">vs</div>
+                        <div class="blue">BLUE TEAM</div>
+                    </div>
+                    <form action="." method="post">
+                        <!-- 입력 영역 -->
+                        <div class="input_team">
+                            <textarea name="query" id="search_input" class="search_red" placeholder="red_team_top&#13;red_team_jg&#13;red_team_mid&#13;red_team_ad&#13;red_team_sup"></textarea>
+                            <textarea name="query" id="search_input" class="search_blue" placeholder="blue_team_top&#13;blue_team_jg &#13;blue_team_mid &#13blue_team_ad&#13;blue_team_sup"></textarea>
+                        </div>
+                        <!-- 제출 버튼 -->
+                      <button class="search_btn" type="submit">
+                        <span class="material-icons">search</span>
+                      </button>
+                    </form>
+                  </div>
+            </section>
+
+            <!-- 검색 안내 -->
+            <section class="guide">
+
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <!-- 저작권 -->
+            <div class="copyright">
+                <p>Copyright &copy; All rights reserved AoiSkyI.</p>
+            </div>
+            <!-- 연락처 -->
+            <div class="connect">
+                <p>Github | aoiskyi</p>
+                <p>Email | sunghl0508@naver.com</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

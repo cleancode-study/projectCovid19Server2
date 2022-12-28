@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 파일 연경 -->
+    <link rel="stylesheet" href="/CSS/record_result.css">
+    <!-- 구글 머티리얼 아이콘 -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- 구글 차트 불러오기 및 파일 연결 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/JS/record_result.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- 헤더 -->
+        <!-- 어디에서나 볼 수 있어야 하는 것 -->
+        <div class="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="/HTML/main.html"><span class="material-icons">palette</span></a>
+                <a class="logo_word" href="/HTML/main.html">League</a>
+            </div>
+            <!-- 메인 메뉴 -->
+            <div class="main_menu">
+                <div class="league_duration"><a href="/HTML/league_duration.html">격전 기간</a></div>
+                <div class="league_reword"><a href="/HTML/league_reword.html">격전 보상</a></div>
+                <div class="record"><a href="/HTML/record.html">전적 검색</a></div>
+                <div class="search_team"><a href="/HTML/search_team.html">팀 찾기</a></div>
+            </div>
+        </div>
+
+        <!-- 메인 -->
+        <!-- section>article, aside>article -->
+        <div class="main">
+            <!-- 검색 결과 -->
+            <section class="record_result">
+                <!-- 소환사의 협곡 맵 -->
+                <!-- 라인별 아이콘 띄워서 맞는 라인 결과 보여주기 -->
+                <div class="map">
+                    <img src="https://obj-kr.the1.wiki/data/706c617965722d67756964652d6d61702d313434302d33323537356261613266386432623262666435636664303765313164313336312e706e67.png" alt="소환사의 협곡">
+                </div>
+                <!-- 아코디언 리스트 -->
+                <ul class="result_box">
+                    <li class="first_box">
+                        <!-- 접었을 때 -->
+                        <div class="fold">
+                            <div class="line">
+                                <p class="line_name">TOP</p>
+                                <div class="line_mark">
+                                    <img src="https://w.namu.la/s/063f1a7744d6a9a9da086fba000984c32b945dc0b36448f31219028621d553841cd08d436d31a98a4c18757b02fa5b129e06577e75172ddbe21ac3daa189ddf098117a964f179ced383354a92759252d05cdd0e418a91982098d6dc51d63d9f1" alt="line_mark">
+                                </div>
+                            </div>
+                            <div class="red">
+                                <div class="win_percent">
+                                    <div id="donutchart1"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blue">
+                                <div class="win_percent">
+                                    <div id="donutchart2"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="img_out_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip_flap_button">
+                                <span class="material-icons">
+                                    unfold_more
+                                </span>
+                            </div>
+                        </div>
+        
+                        <!-- 펼쳤을 때 -->
+                        <div class="open">
+                            <div class="first">
+                                <div class="KDA_op outbox">
+                                    <div class="title">
+                                        <h1>KDA</h1>
+                                        <p>킬 | 데스 | 어시스트</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kda_red">red_kda</div>
+                                        <div class="kda_blue">blue_kda</div>
+                                    </div>
+                                </div>
+                                <div class="DMG_team_rate outbox">
+                                    <div class="title">
+                                        <h1>DMG</h1>
+                                        <p>팀 내 데미지 비중</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="donut_box1">
+                                            <div id="donutchart3"></div>
+                                            <p>60%</p>
+                                        </div>
+                                        <div class="donut_box2">
+                                            <div id="donutchart4"></div>
+                                            <p>50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="KP outbox">
+                                    <div class="title">
+                                        <h1>KP</h1>
+                                        <p>킬 관여율</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kp_red">킬 관여율 red</div>
+                                        <div class="kp_blue">킬 관여율 blue</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second">
+                                <div class="CSD outbox">
+                                    <div class="title">
+                                        <h1>CSD</h1>
+                                        <p>15분 cs 차이 | 총 cs 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="csd_red">15분 cs 차 / 총 cs 차</div>
+                                        <div class="csd_blue">15분 cs 차 / 총 cs 차</div>
+                                    </div>
+                                </div>
+                                <div class="GD outbox">
+                                    <div class="title">
+                                        <h1>GD</h1>
+                                        <p>15분 골드 차이 / 총 골드 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="gd_red">15분 골드 차 / 총 골드 차</div>
+                                        <div class="gd_blue">15분 골드 차 / 총 골드 차</div>
+                                    </div>
+                                </div>
+                                <div class="most_champ outbox">
+                                    <div class="title">
+                                        <h1>MOST TOP 6</h1>
+                                        <p>모스트 탑 6</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="most_champ_red">모스트 탑3</div>
+                                        <div class="most_champ_blue">모스트 탑3</div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support_ban third">
+                                <div class="title">
+                                    <h1>밴픽 추천</h1>
+                                    <p>모스트, 승률, 상성 등 합산</p>
+                                </div>
+                                <div class="inner_box">
+                                    <div class="support_ban_red">
+                                        <div class="ban_box">
+                                            <p>counter pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ban_box">
+                                            <p>opposing liner's best pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="second_box">
+                        <!-- 접었을 때 -->
+                        <div class="fold">
+                            <div class="line">
+                                <p class="line_name">JG</p>
+                                <div class="line_mark">
+                                    <img src="https://w.namu.la/s/4403930b2bc3825d3c77382c57bb696424f975af9880213fe98853bcca61bae2874a37e4642de9c246f87eb81bbe067e60bf4a2d71a3cd766568ed659874403dc6b64403ff79190f723ee4e7804c9adaaa0d677e1c99fe0af366fe7436b3e8ec" alt="line_mark">
+                                </div>
+                            </div>
+                            <div class="red">
+                                <div class="win_percent">
+                                    <div id="donutchart5"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blue">
+                                <div class="win_percent">
+                                    <div id="donutchart6"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="img_out_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip_flap_button">
+                                <span class="material-icons">
+                                    unfold_more
+                                </span>
+                            </div>
+                        </div>
+        
+                        <!-- 펼쳤을 때 -->
+                        <div class="open">
+                            <div class="first">
+                                <div class="KDA_op outbox">
+                                    <div class="title">
+                                        <h1>KDA</h1>
+                                        <p>킬 | 데스 | 어시스트</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kda_red">red_kda</div>
+                                        <div class="kda_blue">blue_kda</div>
+                                    </div>
+                                </div>
+                                <div class="DMG_team_rate outbox">
+                                    <div class="title">
+                                        <h1>DMG</h1>
+                                        <p>팀 내 데미지 비중</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="donut_box1">
+                                            <div id="donutchart7"></div>
+                                            <p>60%</p>
+                                        </div>
+                                        <div class="donut_box2">
+                                            <div id="donutchart8"></div>
+                                            <p>50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="KP outbox">
+                                    <div class="title">
+                                        <h1>KP</h1>
+                                        <p>킬 관여율</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kp_red">킬 관여율 red</div>
+                                        <div class="kp_blue">킬 관여율 blue</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second">
+                                <div class="CSD outbox">
+                                    <div class="title">
+                                        <h1>CSD</h1>
+                                        <p>15분 cs 차이 | 총 cs 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="csd_red">15분 cs 차 / 총 cs 차</div>
+                                        <div class="csd_blue">15분 cs 차 / 총 cs 차</div>
+                                    </div>
+                                </div>
+                                <div class="GD outbox">
+                                    <div class="title">
+                                        <h1>GD</h1>
+                                        <p>15분 골드 차이 / 총 골드 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="gd_red">15분 골드 차 / 총 골드 차</div>
+                                        <div class="gd_blue">15분 골드 차 / 총 골드 차</div>
+                                    </div>
+                                </div>
+                                <div class="most_champ outbox">
+                                    <div class="title">
+                                        <h1>MOST TOP 6</h1>
+                                        <p>모스트 탑 6</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="most_champ_red">모스트 탑3</div>
+                                        <div class="most_champ_blue">모스트 탑3</div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support_ban third">
+                                <div class="title">
+                                    <h1>밴픽 추천</h1>
+                                    <p>모스트, 승률, 상성 등 합산</p>
+                                </div>
+                                <div class="inner_box">
+                                    <div class="support_ban_red">
+                                        <div class="ban_box">
+                                            <p>counter pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ban_box">
+                                            <p>opposing liner's best pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="third_box">
+                        <!-- 접었을 때 -->
+                        <div class="fold">
+                            <div class="line">
+                                <p class="line_name">MID</p>
+                                <div class="line_mark">
+                                    <img src="https://w.namu.la/s/82c44c98703e4b34e65e850c56b312db7b178fbb960585376a045cb4f3f110d14aee9738f8e5ee350ca6a7130f49235f7ec3f01c76e7966bb8119a78dc9dd0cd8abc14bd3c2978d26d085336ceb25aaa5c6b8576f9fc55991125f039fbc6ff8e" alt="line_mark">
+                                </div>
+                            </div>
+                            <div class="red">
+                                <div class="win_percent">
+                                    <div id="donutchart9"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blue">
+                                <div class="win_percent">
+                                    <div id="donutchart10"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="img_out_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip_flap_button">
+                                <span class="material-icons">
+                                    unfold_more
+                                </span>
+                            </div>
+                        </div>
+        
+                        <!-- 펼쳤을 때 -->
+                        <div class="open">
+                            <div class="first">
+                                <div class="KDA_op outbox">
+                                    <div class="title">
+                                        <h1>KDA</h1>
+                                        <p>킬 | 데스 | 어시스트</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kda_red">red_kda</div>
+                                        <div class="kda_blue">blue_kda</div>
+                                    </div>
+                                </div>
+                                <div class="DMG_team_rate outbox">
+                                    <div class="title">
+                                        <h1>DMG</h1>
+                                        <p>팀 내 데미지 비중</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="donut_box1">
+                                            <div id="donutchart11"></div>
+                                            <p>60%</p>
+                                        </div>
+                                        <div class="donut_box2">
+                                            <div id="donutchart12"></div>
+                                            <p>50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="KP outbox">
+                                    <div class="title">
+                                        <h1>KP</h1>
+                                        <p>킬 관여율</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kp_red">킬 관여율 red</div>
+                                        <div class="kp_blue">킬 관여율 blue</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second">
+                                <div class="CSD outbox">
+                                    <div class="title">
+                                        <h1>CSD</h1>
+                                        <p>15분 cs 차이 | 총 cs 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="csd_red">15분 cs 차 / 총 cs 차</div>
+                                        <div class="csd_blue">15분 cs 차 / 총 cs 차</div>
+                                    </div>
+                                </div>
+                                <div class="GD outbox">
+                                    <div class="title">
+                                        <h1>GD</h1>
+                                        <p>15분 골드 차이 / 총 골드 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="gd_red">15분 골드 차 / 총 골드 차</div>
+                                        <div class="gd_blue">15분 골드 차 / 총 골드 차</div>
+                                    </div>
+                                </div>
+                                <div class="most_champ outbox">
+                                    <div class="title">
+                                        <h1>MOST TOP 6</h1>
+                                        <p>모스트 탑 6</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="most_champ_red">모스트 탑3</div>
+                                        <div class="most_champ_blue">모스트 탑3</div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support_ban third">
+                                <div class="title">
+                                    <h1>밴픽 추천</h1>
+                                    <p>모스트, 승률, 상성 등 합산</p>
+                                </div>
+                                <div class="inner_box">
+                                    <div class="support_ban_red">
+                                        <div class="ban_box">
+                                            <p>counter pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ban_box">
+                                            <p>opposing liner's best pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="fourth_box">
+                        <!-- 접었을 때 -->
+                        <div class="fold">
+                            <div class="line">
+                                <p class="line_name">AD</p>
+                                <div class="line_mark">
+                                    <img src="https://w.namu.la/s/7f916b343072a3f9ea7eb9ddefc3f6e3017afe24da3d0c1d039c87ce3906deb627973515e12626a9dd618d7fabee42ee9afbf3427fff1fd51a430aeb80a0a1b5275b6e337de32d83d333d86b767e2739bc2fb5fce20e2f8512d1b6b4530f3407" alt="line_mark">
+                                </div>
+                            </div>
+                            <div class="red">
+                                <div class="win_percent">
+                                    <div id="donutchart13"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blue">
+                                <div class="win_percent">
+                                    <div id="donutchart14"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="img_out_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip_flap_button">
+                                <span class="material-icons">
+                                    unfold_more
+                                </span>
+                            </div>
+                        </div>
+        
+                        <!-- 펼쳤을 때 -->
+                        <div class="open">
+                            <div class="first">
+                                <div class="KDA_op outbox">
+                                    <div class="title">
+                                        <h1>KDA</h1>
+                                        <p>킬 | 데스 | 어시스트</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kda_red">red_kda</div>
+                                        <div class="kda_blue">blue_kda</div>
+                                    </div>
+                                </div>
+                                <div class="DMG_team_rate outbox">
+                                    <div class="title">
+                                        <h1>DMG</h1>
+                                        <p>팀 내 데미지 비중</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="donut_box1">
+                                            <div id="donutchart15"></div>
+                                            <p>60%</p>
+                                        </div>
+                                        <div class="donut_box2">
+                                            <div id="donutchart16"></div>
+                                            <p>50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="KP outbox">
+                                    <div class="title">
+                                        <h1>KP</h1>
+                                        <p>킬 관여율</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kp_red">킬 관여율 red</div>
+                                        <div class="kp_blue">킬 관여율 blue</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second">
+                                <div class="CSD outbox">
+                                    <div class="title">
+                                        <h1>CSD</h1>
+                                        <p>15분 cs 차이 | 총 cs 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="csd_red">15분 cs 차 / 총 cs 차</div>
+                                        <div class="csd_blue">15분 cs 차 / 총 cs 차</div>
+                                    </div>
+                                </div>
+                                <div class="GD outbox">
+                                    <div class="title">
+                                        <h1>GD</h1>
+                                        <p>15분 골드 차이 / 총 골드 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="gd_red">15분 골드 차 / 총 골드 차</div>
+                                        <div class="gd_blue">15분 골드 차 / 총 골드 차</div>
+                                    </div>
+                                </div>
+                                <div class="most_champ outbox">
+                                    <div class="title">
+                                        <h1>MOST TOP 6</h1>
+                                        <p>모스트 탑 6</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="most_champ_red">모스트 탑3</div>
+                                        <div class="most_champ_blue">모스트 탑3</div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support_ban third">
+                                <div class="title">
+                                    <h1>밴픽 추천</h1>
+                                    <p>모스트, 승률, 상성 등 합산</p>
+                                </div>
+                                <div class="inner_box">
+                                    <div class="support_ban_red">
+                                        <div class="ban_box">
+                                            <p>counter pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ban_box">
+                                            <p>opposing liner's best pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="fifth_box">
+                        <!-- 접었을 때 -->
+                        <div class="fold">
+                            <div class="line">
+                                <p class="line_name">SUP</p>
+                                <div class="line_mark">
+                                    <img src="https://w.namu.la/s/37ddab9a4b5cc8a07826d1edbfea66a5b47f6b89e5070f70e0b7ea4cb838b4409bef21a2f369f27fe3e414d89af0c4ef362e2754d8b1090b15c1b08307c261a0f7bc4511f5d827a765efd422f838e1fea91869e54808f0faf91ff74a6bad6743" alt="line_mark">
+                                </div>
+                            </div>
+                            <div class="red">
+                                <div class="win_percent">
+                                    <div id="donutchart17"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blue">
+                                <div class="win_percent">
+                                    <div id="donutchart18"></div>
+                                    <div>
+                                        <p>60%</p>
+                                    </div>
+                                </div>
+                                <div class="kda">
+                                    <p class="kda_score">Kill / Death / Assist</p>
+                                    <p class="kda_GPA">평점</p>
+                                </div>
+                                <div class="most_pick">
+                                    <div class="img_out_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250" alt="모스트1">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg" alt="모스트2">
+                                        </div>  
+                                        <p>kda</p>
+                                    </div>
+                                    <div class="most_pick_box">
+                                        <p>승률</p>
+                                        <div class="img_box">
+                                            <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250" alt="모스트3">
+                                        </div>
+                                        <p>kda</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip_flap_button">
+                                <span class="material-icons">
+                                    unfold_more
+                                </span>
+                            </div>
+                        </div>
+        
+                        <!-- 펼쳤을 때 -->
+                        <div class="open">
+                            <div class="first">
+                                <div class="KDA_op outbox">
+                                    <div class="title">
+                                        <h1>KDA</h1>
+                                        <p>킬 | 데스 | 어시스트</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kda_red">red_kda</div>
+                                        <div class="kda_blue">blue_kda</div>
+                                    </div>
+                                </div>
+                                <div class="DMG_team_rate outbox">
+                                    <div class="title">
+                                        <h1>DMG</h1>
+                                        <p>팀 내 데미지 비중</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="donut_box1">
+                                            <div id="donutchart19"></div>
+                                            <p>60%</p>
+                                        </div>
+                                        <div class="donut_box2">
+                                            <div id="donutchart20"></div>
+                                            <p>50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="KP outbox">
+                                    <div class="title">
+                                        <h1>KP</h1>
+                                        <p>킬 관여율</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="kp_red">킬 관여율 red</div>
+                                        <div class="kp_blue">킬 관여율 blue</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second">
+                                <div class="CSD outbox">
+                                    <div class="title">
+                                        <h1>CSD</h1>
+                                        <p>15분 cs 차이 | 총 cs 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="csd_red">15분 cs 차 / 총 cs 차</div>
+                                        <div class="csd_blue">15분 cs 차 / 총 cs 차</div>
+                                    </div>
+                                </div>
+                                <div class="GD outbox">
+                                    <div class="title">
+                                        <h1>GD</h1>
+                                        <p>15분 골드 차이 / 총 골드 차이</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="gd_red">15분 골드 차 / 총 골드 차</div>
+                                        <div class="gd_blue">15분 골드 차 / 총 골드 차</div>
+                                    </div>
+                                </div>
+                                <div class="most_champ outbox">
+                                    <div class="title">
+                                        <h1>MOST TOP 6</h1>
+                                        <p>모스트 탑 6</p>
+                                    </div>
+                                    <div class="inner_box">
+                                        <div class="most_champ_red">모스트 탑3</div>
+                                        <div class="most_champ_blue">모스트 탑3</div> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support_ban third">
+                                <div class="title">
+                                    <h1>밴픽 추천</h1>
+                                    <p>모스트, 승률, 상성 등 합산</p>
+                                </div>
+                                <div class="inner_box">
+                                    <div class="support_ban_red">
+                                        <div class="ban_box">
+                                            <p>counter pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ban_box">
+                                            <p>opposing liner's best pick</p>
+                                            <div class="img_outer_box">
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt08f869e897566c5b/5db05fdf7d28b76cfe439801/RiotX_ChampionList_lissandra.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltad313195d6b48daa/614e702764c8007a9bdec6b2/RiotX_ChampionList_vex.jpg?quality=90&width=250" alt="밴 픽1">
+                                                </div>
+                                                <div class="img_box">
+                                                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="밴 픽1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <!-- 저작권 -->
+            <div class="copyright">
+                <p>Copyright &copy; All rights reserved AoiSkyI.</p>
+            </div>
+            <!-- 연락처 -->
+            <div class="connect">
+                <p>Github | aoiskyi</p>
+                <p>Email | sunghl0508@naver.com</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
