@@ -213,6 +213,9 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
     - https://youtu.be/pRoway0ktZQ
   - 레이어 표현
     - https://youtu.be/ZyZFU_6lAWc
+- cloud 활용
+  - 클라우드 intellij에서 배포
+    - https://youtu.be/ZBooPaJOeDU
 - 인공지능 기본인프라
   - 추후 보강
 - 인공지능을 위한 통계
