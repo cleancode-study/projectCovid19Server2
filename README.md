@@ -2,40 +2,7 @@
 - [project info](#project-info)
 - [그래프 샘플](#그래프-샘플)
 
-#### project info
-- Springboot에서 CSV 및 URL 관리, HTML 그래프
-- Flask에서 데이터 통계(CSV) 정리 및 저장 (Pandas, Requests)
 
-- Python언어로 컨텐츠 통계 및 데이터저장(CSV) 작업을 하고, 
-- Github에 CSV파일 업로드와 Springboot DB에 URL주소 전달 <-> Flask는 Springboot에 CSV주소 수신
-- 코로나 데이터로 Pandas의 통계, sklean의 모델링, openCV 데이터 분석, tenserflow의 모델사용 
-
-
-
-### 기획서 작성법
-- 클래스 다이어그램 : class(인스턴스) 연관관계
-  - 빅데이터 데이터 통계 테이블(전처리 후)의 표기를 위한 클래스 다이어그램
-  - 자바의 솔루션 entity 설명을 위한 클래스 다이어그램
-- 스토리보드 : 화면 설명
-  - 와이어프레임 사용
-  - 일반 화면 캡쳐 사용
-- 기술스택 : 이력서 용도의 용어집(면접)
-  - 개발 환경구성 : 개발자가 개발하기 위한 환경(서버)
-    - git : repository URL
-    - IntelliJ
-    - jupyter notebook
-    - anaconda 
-      - 가상환경을 구성하고 빅데이터 분석에 필요한 다음 라이브러리 설치
-        - scikit-learn : randomForest, gradient boost 알고리즘 활용
-        - pandas : csv 전처리 활용 및 테이블 저장
-  - 실제 서버환경 : 서비스를 제공하기 위한 환경(서버)
-    - Server OS : ubuntu20.04 (CentOS7)
-    - Python : Python3.9
-      - dictionary 병합 활용 (개발 버전의 당위성 설명)
-      - Pandas 1.52 에 적용
-    - Dash : 2.7버전의 plotly framework
-- 요구사항 분석 + 데이터기반
-  - 데이터 기반의 가설 주장과 근거를 그래프와 함께 표기
 
 #### 데이터 시각화(보고서)
 - 데이터 시각화를 통한 빅데이터 인사이트 전달
@@ -164,8 +131,8 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 
 #### todoList
 
-| 완료     | 작업내용                                              | 완료날짜      |
-|--------|---------------------------------------------------|-----------|
+| 완료     | 작업내용                                              | 완료날짜       |
+|--------|---------------------------------------------------|------------|
 | closed | data.go.kr 공공데이터 요청                               | 2022-12-12 |
 | closed | Java 언어로 api데이터 받기 샘플코드 완성                        | 2022-12-12 |
 | closed | github가입과 관리                                      | 2022-12-12 |
@@ -181,15 +148,13 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 | closed | 시각화 페이지 URL 전달하는 API 만들기 (route CSV)              | 2022-12-16 |
 | closed | 포트폴리오 목록 정하기 / 개발자 용어 정리                          | 2022-12-16 |
 | closed | 시각화 HTML 만들기 3 (그래프 그리기)                          | 2022-12-16 |
-| open   | -                                                 | -         |
-| closed | collection framwork 데이터 타입 정립 (java = python)     | 2022-12-19         |
+| closed | collection framwork 데이터 타입 정립 (java = python)     | 2022-12-19 |
 | closed | pandas 활용하여 데이터 정규화                               | 2022-12-19 |
-| open   | -                                                 | -         |
-| open   | 시계열 분석이 완료된 통계 데이터를 받아서 spring 그래프 출력하기           | 2022-12-19   |
-| open   | Dash example                                      | 2022-12-20 |
-| open   | 검색 내용 출력 기능                                       | 2022-12-20 |
-| open   | 코로나 그래프 만들기 1                                     | 2022-12-21 |
-| open   | dashboard 용도 메인 그래프 작성                            | 2022-12-21 |
+| closed | 시계열 분석이 완료된 통계 데이터를 받아서 spring 그래프 출력하기           | 2022-12-19 |
+| closed | Dash example                                      | 2022-12-20 |
+| closed | 검색 내용 출력 기능                                       | 2022-12-20 |
+| closed | cloudType 활용한 서비스 배포                              | 2022-12-29 |
+| open   | -                                                 | -          |
 
 ---
 
@@ -225,17 +190,17 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 - 머신러닝 모델 검증 
   - 추후 보강
 
-                      
-#### 서버 directory 구조
+
+### 서버 directory 구조 : spring
 
 > component
 > > convert : json과 map 자료형 변환 메서드
 
 > controller
 > > graph : graph HTML 이동
-> 
+>
 > > openapi : 공공데이터 혹은 openapi 받는 controller
-> 
+>
 > > rest : 통계서버 (python) 연동하는 api
 
 > entity
@@ -248,6 +213,23 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 > > example : 실질적인 개발자 코드를 작성하는 영역 (controller와 의존관계)
 
 > temp : 사용하지 않는 코드를 임시 저장
+
+### 서버 directory 구조 : flask
+
+> component
+> > convert : 
+
+> dataframe
+> > 각종 데이터 관리 패키지
+
+> layout
+> > DASH 라이브러리의 출력 파일 관리 
+
+> templetes
+> > HTML 파일 관리
+
+> app.py
+> > @route 활용하여 URL 분기점 생성
 
 #### 포트폴리오 개발파트 영역 
 ![이미지제목](/src/main/resources/static/img/developPart.png)
@@ -290,22 +272,6 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
   - (시스템 관점) 제어 용이성
 
 ---
-#### 개발문서
-| 제목             |주소 |작업자|
-|----------------|----|----|
-| 시각화 서버코드 110   |https://github.com/cleancode-study/projectCovid19Server110.git|김준석|
-| 시각화 서버 ip/port |http://192.168.42.100:8080/|김준석|
-| 관리 서버 ip/port  |http://192.168.42.100:8090/|김준석|
-| 시각화 서버(python) |http://192.168.42.100:8100/|김준석|
-| 통계 서버(python)  | http://192.168.42.100:8110/ |김준석|
-
----
-#### API 문서 (Controller Mapping URL)
-| API URL      | return 내용  |작업자|
-|--------------|------------|----|
-| /account/put | 회원가입 정보 저장 |김준석|
-
----
 #### 환경구성
 - 개발환경
   - Spring boot 3.0.0 
@@ -341,6 +307,49 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 - name : js
 
 ---
+### deploy example
+- 테라폼 설치 : https://www.terraform.io/downloads
+- 환경변수 등록 : 시스템환경변수 편집 > D:\cleancode\terraform
+
+*Activate API list
+- Compute Engine API
+- Cloud Resource Manager API
+
+- GCP service account : IAM 및 관리자 > 서비스 계정 > +서비스 계정 만들기 (역할:편집자)
+- 계정 선택 > 키 > 키 추가 > 다운 받은 키를 특정 폴더에 저장
+
+*terraform 코드 실행 (static/tool/instance.tf 파일)
+- terraform init
+- terraform apply
+
+--------- google cloud 설정 ---------
+- VPC 네트워크 > VPC 네트워크 > default > 방화벽 > 방화벽 규칙 추가
+- 8080, 5000 port 추가
+
+
+-------- springboot 배포 ----------
+*다운로드 기능을 최신버전으로 업데이트 : sudo(관리자 모드)
+- sudo apt update && sudo apt upgrade -y
+*자바 다운로드
+- sudo apt-get install openjdk-17-jre
+
+*build 파일 만들기
+- 인텔리제이에서 우측 상단 Gradle탭 클릭
+- Tasks > build > bootJar 클릭
+- build폴더에 libs폴더에 jar파일을 서버에 업로드
+
+*jar 파일 실행
+- java -jar <파일명>
+
+------- flask 배포 ---------
+- 서버에 파이썬 설치
+- 필요한 lib 설치
+- py파일 업로드
+- py파일 실행
+
+
+
+---
 ```
   이력서 작성법
 ```
@@ -366,6 +375,33 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 면접)
 면접 인사(사회생활 잘 할 것 같은 인상)
 면접이 끝난 후 피드백 요청
+```
+---
+```
+### 기획서 작성법
+- 클래스 다이어그램 : class(인스턴스) 연관관계
+  - 빅데이터 데이터 통계 테이블(전처리 후)의 표기를 위한 클래스 다이어그램
+  - 자바의 솔루션 entity 설명을 위한 클래스 다이어그램
+- 스토리보드 : 화면 설명
+  - 와이어프레임 사용
+  - 일반 화면 캡쳐 사용
+- 기술스택 : 이력서 용도의 용어집(면접)
+  - 개발 환경구성 : 개발자가 개발하기 위한 환경(서버)
+    - git : repository URL
+    - IntelliJ
+    - jupyter notebook
+    - anaconda 
+      - 가상환경을 구성하고 빅데이터 분석에 필요한 다음 라이브러리 설치
+        - scikit-learn : randomForest, gradient boost 알고리즘 활용
+        - pandas : csv 전처리 활용 및 테이블 저장
+  - 실제 서버환경 : 서비스를 제공하기 위한 환경(서버)
+    - Server OS : ubuntu20.04 (CentOS7)
+    - Python : Python3.9
+      - dictionary 병합 활용 (개발 버전의 당위성 설명)
+      - Pandas 1.52 에 적용
+    - Dash : 2.7버전의 plotly framework
+- 요구사항 분석 + 데이터기반
+  - 데이터 기반의 가설 주장과 근거를 그래프와 함께 표기
 ```
 ---
 ```
