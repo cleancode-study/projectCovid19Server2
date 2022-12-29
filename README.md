@@ -324,7 +324,10 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 
 --------- google cloud 설정 ---------
 - VPC 네트워크 > VPC 네트워크 > default > 방화벽 > 방화벽 규칙 추가
-- 8080, 5000 port 추가
+- 8080, 5000 port 추가 + 대상은 특정 태그가 아닌 전체 적용 필요
+
+--------- ubuntu 설정 ----------
+- sudo iptables -I INPUT 1 -p tcp --dport 8080 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 
 -------- springboot 배포 ----------
@@ -342,10 +345,14 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 - java -jar <파일명>
 
 ------- flask 배포 ---------
-- 서버에 파이썬 설치
-- 필요한 lib 설치
-- py파일 업로드
-- py파일 실행
+*필요한 lib 설치
+- sudo apt install python3-pip
+- sudo pip3 install dash
+- sudo pip3 install pandas
+- sudo pip3 install flask 
+*py파일 git clone
+*py파일 실행
+python3 <파일명>
 
 
 
