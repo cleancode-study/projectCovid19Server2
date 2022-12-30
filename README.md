@@ -321,6 +321,7 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 *terraform 코드 실행 (static/tool/instance.tf 파일)
 - terraform init
 - terraform apply
+- terraform destroy
 
 --------- google cloud 설정 ---------
 - VPC 네트워크 > VPC 네트워크 > default > 방화벽 > 방화벽 규칙 추가

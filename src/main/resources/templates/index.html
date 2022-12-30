@@ -9,7 +9,20 @@
     <link rel="stylesheet" type="text/css" href="/css/progress_bar2.css">
     <!--    plotly chart-->
     <link rel="stylesheet" type="text/css" href="/css/option_3d.css">
+    <!--    plotly chart-->
+    <link rel="stylesheet" type="text/css" href="/css/graph/typography_example.css">
     <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+    <style th:inline="text">
+        #typo_example1::before {
+            width : calc(100% - [[@{(${typo_example1_bar_length})}]]px);
+        }
+        #typo_example2::before {
+            width : calc(100% - [[@{(${typo_example2_bar_length})}]]px);
+        }
+        #typo_example3::before {
+            width : calc(100% - 400px);
+        }
+    </style>
 </head>
 <body>
 <!--
@@ -61,6 +74,24 @@
     - tuple 영역 : main 영역의 한 줄
     - display : flex;
     -->
+    <div class="tuple_example" style="
+    height: 130%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    ">
+        <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        ">
+            <h2 id="typo_example1" class="typo_example">2021년 질병사망 원인 암<span>21%</span><span>15%</span></h2>
+            <h2 id="typo_example2" class="typo_example">2021년 질병사망 원인 심장질환<span>17%</span><span>11%</span></h2>
+            <h2 id="typo_example3" class="typo_example">2021년 질병사망 원인 폐렴 상장률<span>5%</span><span>2%</span></h2>
+        </div>
+    </div>
+    <hr>
     <div class="tuple_example" style="
     height: 50%;
     width: 100%;
@@ -174,9 +205,12 @@
     </div>
 </div>
 
+
+
 </div>
 
 <script th:inline="javascript">
+
     var data_3dgraph=[
         {
         opacity:0.8,

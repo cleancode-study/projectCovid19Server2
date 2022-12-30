@@ -76,6 +76,9 @@ public class barGraphController {
         model.addAttribute("linear_trace2_x_value", barGraphService.getLinear_graph2_y_value());
         model.addAttribute("linear_trace2_y_value", barGraphService.getLinear_graph2_x_value());
 
+        model.addAttribute("typo_example1_bar_length", "100");
+        model.addAttribute("typo_example2_bar_length", "300");
+
         //mission : @service에서 데이터를 받아서 controller model에 데이터를 넣고,
         // css / javascript 타임리프 문법으로 데이터를 넣어서 그래프를 완성하시오
         //css : <div th:attrappend="style=${data}"></div> : 속성=속성값 모두 문자열로 전달해야 함

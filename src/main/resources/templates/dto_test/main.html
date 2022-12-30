@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmls:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FROM EXAMPLE</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div clas="container">
+<!--    // method: 어떻게 보낼까? == post? get?-->
+<!--    // action: 어디로 보낼까?-->
+    <form th:action="@{/getForm}" th:object="${formValueReturn}" method="post" accept-charset="UTF-8">
+      <div class="red">
+        <label class="form_label">red</label>
+        <textarea class="form_text_area" name="redTeam" rows="5" placeholder="red_team_top&#13;red_team_jg&#13;red_team_mid&#13;red_team_ad&#13;red_team_sup"></textarea>
+      </div>
+      <div class="blue">
+        <label class="from_label">blue</label>
+        <textarea class="from_text_area" name="blueTeam" rows="5" placeholder="blue_team_top&#13;blue_team_jg &#13;blue_team_mid &#13blue_team_ad&#13;blue_team_sup"></textarea>
+      </div>
+      <button type="submit" class="form_submit_btn">검색</button>
+    </form>
+  </div>
+</body>
+</html>
