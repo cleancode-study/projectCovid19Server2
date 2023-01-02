@@ -2,6 +2,7 @@
 - [project info](#project-info)
 - [그래프 샘플](#그래프-샘플)
 - [강의동영상](#강의-동영상목록)
+- [배포예제](#deploy-example)
 
 #### 데이터 시각화(보고서)
 - 데이터 시각화를 통한 빅데이터 인사이트 전달
@@ -207,7 +208,7 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 ![이미지제목](/src/main/resources/static/img/storyboard.png)
 ---
 #### 클래스 다이어그램
-![이미지제목](/src/main/resources/static/img/classDiagram.png)
+![이미지제목](/src/main/resources/static/img/classdiagram_example.png)
 
 
 ---
