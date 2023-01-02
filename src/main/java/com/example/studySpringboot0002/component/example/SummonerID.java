@@ -58,11 +58,10 @@ public class SummonerID {
 //        System.out.println(apiZip.getSummonerV4());
         // 이거 http:// 안 달려 있는 코드임 형식 맞게 붙여주셈
         // 주소 형식 예제
-        // https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/16%EC%B8%B5%EB%82%A8%EB%B0%9430%EB%B0%94%EB%93%9C
+        // https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/???
 
         // 1. API 주소 설정
-//        String API = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/16%EC%B8%B5%EB%82%A8%EB%B0%9430%EB%B0%94%EB%93%9C";
-      String API = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/16%EC%B8%B5%EB%82%A8%EB%B0%9430%EB%B0%94%EB%93%9C?api_key=RGAPI-3a549bfe-ce0a-471f-897d-b5985ffe2307";
+        String API = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
 
         // 2. URL 객체 생성
         URL url = new URL(API);
@@ -82,7 +81,7 @@ public class SummonerID {
         conn.setRequestProperty("Accept-Language", "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7");
         conn.setRequestProperty("Accept-Charset", "application/x-www-form-urlencoded; charset=UTF-8");
         conn.setRequestProperty("Origin", "https://developer.riotgames.com");
-//        conn.setRequestProperty("X-Riot-Token","RGAPI-3a549bfe-ce0a-471f-897d-b5985ffe2307");
+
 
 
         // 4. 통신 메서드 SET(GET, POST)
