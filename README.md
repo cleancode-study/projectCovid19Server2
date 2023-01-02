@@ -166,7 +166,8 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
       - https://www.youtube.com/watch?v=5bcfmPfRmYE&t=2s
     - 기본2 HTML 게시판2 
       - https://www.youtube.com/watch?v=VHxR7AoCZ74
-    - 기본3 Container 이론 : https://www.youtube.com/watch?v=cPpS_hsY71E
+    - 기본3 Container 이론 
+      - https://www.youtube.com/watch?v=cPpS_hsY71E
 - Springboot 이론예제
   - API 데이터 가공 및 출력
     - https://www.youtube.com/watch?v=UO8XifPROOc
@@ -174,7 +175,7 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
     - https://www.youtube.com/watch?v=C_gAwnseXqI
   - 이미지 업로드/다운로드
     - https://www.youtube.com/watch?v=7dmwTbSiudw
-  - 차순위 : 세션과 쿠키와 (교과서 part7)시큐리티, jwt활용
+  - 차순위 : 세션과 쿠키와 (교과서 part7)시큐리티
 - nextjs 13 기본인프라
   - 구조
     - https://youtu.be/pRoway0ktZQ
@@ -187,11 +188,11 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
     - https://youtu.be/rGWIi6pjV28
   - 클라우드 intellij에서 배포
     - https://youtu.be/ZBooPaJOeDU
-- 인공지능을 위한 통계이론
+- 전처리와 통계이론
   - 추후 보강
-- 인공지능 대표 모델 설명
+- 인공지능 대표 모델과 예제
   - 추후 보강
-- 머신러닝 모델 검증 
+- 머신러닝 모델 검증
   - 추후 보강
 
 
