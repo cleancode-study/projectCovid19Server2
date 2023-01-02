@@ -29,6 +29,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	//JSON 포맷으로 데이터 받고, 전달하기
 	implementation("org.json:json:20190722")
+	implementation("com.googlecode.json-simple:json-simple:1.1.1")
 	//DB 연동
 	implementation("mysql:mysql-connector-java")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")

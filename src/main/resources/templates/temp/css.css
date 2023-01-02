@@ -65,3 +65,21 @@ h2:hover span:nth-child(1) {
 h2:hover span:nth-child(2) {
     transform: translateY(0px);
 }
+.grid-container {
+    width: 500px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    grid-template-rows: 5fr 8fr 1fr;
+}
+.border-example {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  border: none;
+  border-radius: 50%;
+  background: burlywood;
+}
+.text-example {
+    align-self: center;
+}
