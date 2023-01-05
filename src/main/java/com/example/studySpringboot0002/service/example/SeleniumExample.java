@@ -1,6 +1,7 @@
 package com.example.studySpringboot0002.service.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,8 +36,9 @@ public class SeleniumExample {
         base_url = "https://map.kakao.com/link/search/수원시청음식점";
         driver.get(base_url);
         List<WebElement> elements_button;
+        List<WebElement> elements_click_case;
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
 //            List<WebElement> elements_span = driver.findElements(By.tagName("span"));
 //            int checkNum1 = 0;
 //            for(WebElement e : elements_span) {
@@ -49,8 +51,26 @@ public class SeleniumExample {
 
             //tag search
             elements_button = driver.findElements(By.className("placelist"));
-            System.out.println("------------------------------------------");
             System.out.println(elements_button.get(0).getText());
+            System.out.println("------------------------------------------");
+//            장소 더 보기 클릭 후 데이터 추가
+//            List<WebElement> elements_click_case; 선언 필요
+
+            WebElement element = driver.findElement(By.id("info.search.place.more"));
+            ((ChromeDriver) driver).executeScript("arguments[0].click();", element);
+            Thread.sleep(5000);
+            elements_click_case = driver.findElements(By.className("placelist"));
+            System.out.println(">>>>>>>>>>check");
+            System.out.println(elements_click_case.get(0).getText());
+
+//            3번째 page 클릭
+//            WebElement element = driver.findElement(By.id("info.search.page.no3"));
+
+
+//            ------------------------ button click
+
+//            elements_click_case = driver.findElements(By.className("placelist"));
+//            System.out.println(elements_click_case.get(0).getText());
 //            int checkNum = 0;
 //
 //            for(WebElement e : elements_button) {

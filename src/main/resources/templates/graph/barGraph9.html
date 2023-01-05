@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+  padding:0;
+  margin: 0;
+}
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background:#cdcdcf;
+}
+
+ul {
+  list-style-type:none;
+  overflow:hidden;
+  padding-left:100px;
+}
+
+li{
+float:left;
+width:250px;
+height:800px;
+}
+
+a{
+  display:block;
+  text-decoration:none;
+}
+a{
+  -webkit-animation: onLeave 0.1s ease-in-out;
+  animation: onLeave 0.1s ease-in-out;
+  -webkit-transform:  scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;
+      transform:          scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;
+}
+a:hover{
+  -webkit-animation: onHover 0.1s ease-in-out;
+  animation: onHover 0.1s ease-in-out;
+  -webkit-transform:  scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+      transform:          scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+}
+
+@-webkit-keyframes onLeave
+{
+0%  {-webkit-transform:  scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+      transform:         scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;}
+100%{-webkit-transform:  scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;
+      transform:         scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;}
+}
+@keyframes onLeave
+{
+0%  {-webkit-transform:  scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+      transform:         scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;}
+100%{-webkit-transform:  scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;
+      transform:         scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;}
+}
+
+@-webkit-keyframes onHover
+{
+0%  {-webkit-transform:  scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;
+      transform:         scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;}
+100%{-webkit-transform:  scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+      transform:         scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;}
+}
+@keyframes onHover
+{
+0%  {-webkit-transform:  scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;
+      transform:         scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;}
+100%{-webkit-transform:  scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+      transform:         scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;}
+}
+
+body:before{
+  content:"";
+  border: none;
+  position:absolute;
+  width:100%;
+  height: 550px;
+  display:block;
+  vertical-align:buttom;
+  background: -webkit-radial-gradient(closest-side, #eff0f2 0, #bdbdbf 100%);
+  background: -moz-radial-gradient(closest-side, #eff0f2 0, #bdbdbf 100%);
+  background: radial-gradient(closest-side, #eff0f2 0, #bdbdbf 100%);
+}
+
+.fill {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90px;
+  height: 180px;
+  line-height: 90px;
+  position: relative;
+  top: 200px;
+  left: 70px;
+  padding: 140px 0px 0px 8px;
+  border: none;
+  font: normal normal bold 26px/normal Tahoma, Geneva, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: left;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(0deg, rgba(255,43,43,1) 0, rgba(209,31,31,1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(255,43,43,1) 0, rgba(209,31,31,1) 100%);
+  background: linear-gradient(90deg, rgba(255,43,43,1) 0, rgba(209,31,31,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1)  skewY(-3deg);
+  transform:  scaleX(1) scaleY(1) scaleZ(1)  skewY(-3deg);
+  -webkit-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+  -webkit-box-shadow: 0 11px 18px -5px #841313 inset;
+  box-shadow: 0 11px 18px -5px #841313 inset;
+}
+
+.fill::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border: none;
+  font: normal normal normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0, 0, 0, 0.901961);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-180deg, #c62121 0, rgba(132,19,19,1) 100%);
+  background: -moz-linear-gradient(270deg, #c62121 0, rgba(132,19,19,1) 100%);
+  background: linear-gradient(270deg, #c62121 0, rgba(132,19,19,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  text-shadow: none;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1) translateX(-44px) skewY(20deg);
+  transform:  scaleX(1) scaleY(1) scaleZ(1) translateX(-44px) skewY(20deg);
+  -webkit-transform-origin: 100% 100% 0;
+  transform-origin: 100% 100% 0;
+  -webkit-box-shadow: 0 11px 18px -5px #841313 inset;
+  box-shadow: 0 11px 18px -5px #841313 inset;
+}
+
+.front_upper {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+  position: relative;
+  padding: 8px;
+  border: none;
+  top: -350px;
+  left: -100px;
+  font: normal normal bold 12px/normal Verdana, Geneva, sans-serif;
+  color: rgba(0,0,0,0.56);
+  text-align: right;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, #fefefe 0, #fefefe 4%, #f4f4f4 100%);
+  background: -moz-linear-gradient(180deg, #fefefe 0, #fefefe 4%, #f4f4f4 100%);
+  background: linear-gradient(180deg, #fefefe 0, #fefefe 4%, #f4f4f4 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-transform: rotateZ(-90deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  transform: rotateZ(-90deg) scaleX(1) scaleY(1) scaleZ(1)  ;
+  -webkit-transform-origin: 90% 100% 0;
+  transform-origin: 90% 100% 0;
+}
+
+.front_upper::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border: none;
+  font: normal normal normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, #a5a6aa 0, #c7c7c9 100%);
+  background: -moz-linear-gradient(180deg, #a5a6aa 0, #c7c7c9 100%);
+  background: linear-gradient(180deg, #a5a6aa 0, #c7c7c9 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  text-shadow: none;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1) translateY(-100%) ;
+  transform:  scaleX(1) scaleY(1) scaleZ(1) translateY(-100%) ;
+  -webkit-transform-origin: 100% 100% 0;
+  transform-origin: 100% 100% 0;
+}
+
+.front_upper::after {
+  width: 10%;
+  height: 50%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 90%;
+  border: none;
+  font: normal normal normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, #a5a6aa 0, #c7c7c9 100%);
+  background: -moz-linear-gradient(180deg, #a5a6aa 0, #c7c7c9 100%);
+  background: linear-gradient(180deg, #a5a6aa 0, #c7c7c9 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  text-shadow: none;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1) translateY(-100%) skewX(22deg);
+  transform:  scaleX(1) scaleY(1) scaleZ(1) translateY(-100%) skewX(22deg);
+  -webkit-transform-origin: 100% 100% 0;
+  transform-origin: 100% 100% 0;
+}
+
+.buttom {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100px;
+  height: 130px;
+  position: relative;
+  top: 513px;
+  left: 70px;
+  padding: 8px;
+  border: none;
+  font: normal normal bold 9px/normal Verdana, Geneva, sans-serif;
+  color: rgba(0, 0, 0, 0.560784);
+  text-align: right;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(0deg, #fefefe 0, #f5f5f5 100%);
+  background: -moz-linear-gradient(90deg, #fefefe 0, #f5f5f5 100%);
+  background: linear-gradient(90deg, #fefefe 0, #f5f5f5 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1)  skewY(-3deg);
+  transform:  scaleX(1) scaleY(1) scaleZ(1)  skewY(-3deg);
+  -webkit-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+}
+
+.buttom::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 14%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border: none;
+  font: normal normal normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0, 0, 0, 0.901961);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(255,255,255,1);
+  text-shadow: none;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1) translateX(-50%) translateY(-97%) skewX(70deg);
+  transform:  scaleX(1) scaleY(1) scaleZ(1) translateX(-50%) translateY(-97%) skewX(70deg);
+  -webkit-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+}
+
+.buttom::after {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 90%;
+  border: none;
+  font: normal normal normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0, 0, 0, 0.901961);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(0deg, rgb(165,166,170) 0, rgb(199,199,201) 100%);
+  background: -moz-linear-gradient(90deg, rgb(165,166,170) 0, rgb(199,199,201) 100%);
+  background: linear-gradient(90deg, rgb(165,166,170) 0, rgb(199,199,201) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  text-shadow: none;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1) translateX(-281%) translateY(-14%) skewY(20deg);
+  transform:  scaleX(1) scaleY(1) scaleZ(1) translateX(-281%) translateY(-14%) skewY(20deg);
+  -webkit-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+}
+
+.shadow {
+  width: 200px;
+  height: 50px;
+  border: none;
+  position:relative;
+  top:650px;
+  left:-30px;
+  font: normal normal normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-radial-gradient(closest-side, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0) 100%);
+  background: -moz-radial-gradient(closest-side, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0) 100%);
+  background: radial-gradient(closest-side, rgba(0,0,0,0.5) 0, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1)  ;
+  transform:  scaleX(1) scaleY(1) scaleZ(1)  ;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+}
+  </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#">
+    <div class="shadow"></div>
+    <div class="buttom">CSS3 SCRIPTING</div>
+    <div class="fill">60%</div>
+    <div class="front_upper">3D Chart pure CSS</div>
+  </a></li>
+
+  <li><a href="#">
+    <div class="shadow"></div>
+    <div class="buttom">Sorry for ugly CSS and static variables</div>
+    <div class="fill">60%</div>
+    <div class="front_upper">Put your label here</div>
+  </a></li>
+
+  <li><a href="#">
+    <div class="shadow"></div>
+    <div class="buttom">Осталось только присобачить монитор</div>
+    <div class="fill">60%</div>
+    <div class="front_upper">СТОЛБ НА РУССКОМ ЯЗЫКЕ</div>
+  </a></li>
+</ul>
+</body>
+</html>
