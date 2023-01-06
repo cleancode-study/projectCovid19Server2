@@ -31,9 +31,23 @@
 </ul>
 
 <style>
+    .bottom:hover {
+      animation: onHover 0.3s ease-in-out;
+      transform: scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;
+    }
+    @keyframes onLeave {
+        0%  {
+      transform:         scaleX(1.1) scaleY(1.1) scaleZ(1.1)  ;}
+        100%{
+      transform:         scaleX(1.0) scaleY(1.0) scaleZ(1.0)  ;}
+    }
     #bar { list-style:none; }
-    #bar li div.top { background-color:rgba(140,172,176,0.5); position:relative;
-   width:100px; height:40px; -moz-border-radius: 100px/40px; -webkit-border-radius: 100px 40px; border-radius: 100px/40px; }
+    #bar li div.top {
+        background-color:rgba(140,172,176,0.5);
+        position:relative;
+        width:100px;
+        height:40px;
+        -moz-border-radius: 100px/40px; -webkit-border-radius: 100px 40px; border-radius: 100px/40px; }
 #bar li div.top img { display:none; }
 #bar li div.bottom { background-color:rgba(184,203,205,0.5); margin-top:-40px; position:relative;
    width:100px; -moz-border-radius: 100px/40px; -webkit-border-radius: 100px 40px; border-radius: 100px/40px; }
