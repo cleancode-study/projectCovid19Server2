@@ -168,9 +168,14 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 | closed   | matplotlib 한글 수정과 언어와 OS 구조                       | 2023-01-05 |
 | closed   | 시각화 HTML 만들기 6 (그래프 그리기)                          | 2023-01-05 |
 | closed   | 사이킷런 선형회귀 복습                                      | 2023-01-05 |
+| open   | jquery Example                                    | 2023-01-09 |
+| open   | dash graph 2중 표현 (use plotly.graph_objs)          | 2023-01-09 |
+| open   | MLPClassifier 사용하여 모델링 적용 예제                      | 2023-01-09 |
+| open   | -                                                 | -          |
 | open   | -                                                 | -          |
 
 ---
+
 
 #### 강의 동영상목록
 - Springboot 기본인프라
@@ -201,9 +206,9 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
   - 클라우드 intellij에서 배포
     - https://youtu.be/ZBooPaJOeDU
 - 전처리와 통계이론
-  - 추후 보강
+  - https://www.youtube.com/watch?v=NCh_kSCYEQw
 - 인공지능 대표 모델과 예제
-  - 추후 보강
+  - 선형회귀 / tree모델(랜덤포레스트, 라이트GBM) / PCA(차원분석)
 - 머신러닝 모델 검증
   - 추후 보강
 

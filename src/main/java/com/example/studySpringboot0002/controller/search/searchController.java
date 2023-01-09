@@ -6,10 +6,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import static com.example.studySpringboot0002.component.useLocalMethod.useTimeMethod.timeData;
 
@@ -24,6 +27,24 @@ public class searchController {
     public searchController(SearchService service) {
         this.searchService = service;
     }
+
+    @GetMapping("/ajax")
+    public String ajax() {
+        return "ajaxtest";
+    }
+
+    @PostMapping("/ajaxtest")
+    @ResponseBody
+    public String ajaxtest(Model model,
+                                      @RequestParam(value = "name")String name,
+                                      @RequestParam(value = "location")String location
+
+    ) {
+        System.out.println(name);
+        System.out.println(location);
+        return name;
+    }
+
 
     // ipv6 타입 return 값을 ipv4로 변경
     // VM Options에 -Djava.net.preferIPv4Stack=true
