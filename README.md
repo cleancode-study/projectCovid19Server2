@@ -109,6 +109,13 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 - List : 배열(가변배열) = python의 list []
 - Map : key:value = python의 dictionary
 - JSON : javascript object notation : key:value로 이루어진 배열 자료열 (map이 배열로 구성)로 된 포맷
+
+
+- Despatcher Servlet : 클라이언트의 요청을 안내하는 에스코트 서블릿
+- @RequestParam : 클라이언트의 Key값을 찾아 연결하는 어노테이션
+- WSGI(Uvicorn) : 웹서버와 python 앱 사이에 통신 인터페이스
+
+
 - pandas 전처리
   - mean() : 평균값
   - median() : 중앙값
@@ -117,6 +124,13 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
   - dropna() : 결측값 처리
   - fillna(x.mean()) : 평균값으로 결측값 채우기
   - categorical() : 정수 기반의 범주형 데이터형
+  - sklearn.preprocessing.StandardScaler : 평균0 분산1 스케일링
+  - sklearn.preprocessing.RobustScaler 중앙값(median)과 사분위값 사용
+  - sklearn.preprocessing.MinMaxScaler : 최대/최소값이 각각 1, 0이 되도록 스케일링
+  - Undersampling : 데이터를 삭제하여 균형 맞추기
+    - SMOTE(Synthetic Minority Over-sampling Technique) : 최근접 이웃을 활용하여 데이터 생성
+  - Oversampling : 데이터를 증가시켜서 균형 맞추기
+
 
 - 정적타입 : 동적타입과 다르게 변수에 타입 스타일을 지정하는 방식 : 파이썬의 typehint도 유사
 - Class와 Instance : 설계도와 찍어낸 객체
@@ -126,9 +140,12 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 - 오버로딩 : 다양한 스타일로 생성자 만드는 기법
 - 오버라이딩 : 부모클래스의 동일한 메서드를 재정의하여 바꾸기
 
-- Despatcher Servlet : 클라이언트의 요청을 안내하는 에스코트 서블릿
-- @RequestParam : 클라이언트의 Key값을 찾아 연결하는 어노테이션
-- WSGI(Uvicorn) : 웹서버와 python 앱 사이에 통신 인터페이스
+
+- ajax : Asynchronous JavaScript And XML : 서버와 통신하기 위해 XMLHttpRequest 객체를 사용하여 데이터를 주고 받는 비동기 방식
+  - getElementById 또는 createElement를 활용하여 DOM를 수정하며 페이지 새로고침을 하지 않고 데이터 변경 로직 구성 가능
+- SSR : Server Side Rendering : 연산작업이 서버 컴퓨터에서 실행하여 랜더링을 끝마치고 클라이언트에게 전달
+- CSR : Client Side Rendering : 연산작업이 클라이언트 컴퓨터에서 실행하여 클라이언트에서 랜더링 실행
+
 
 #### todoList
 
@@ -168,10 +185,9 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 | closed   | matplotlib 한글 수정과 언어와 OS 구조                       | 2023-01-05 |
 | closed   | 시각화 HTML 만들기 6 (그래프 그리기)                          | 2023-01-05 |
 | closed   | 사이킷런 선형회귀 복습                                      | 2023-01-05 |
-| open   | jquery Example                                    | 2023-01-09 |
-| open   | dash graph 2중 표현 (use plotly.graph_objs)          | 2023-01-09 |
+| open   | jquery Example(source URL Stramming)              | 2023-01-09 |
 | open   | MLPClassifier 사용하여 모델링 적용 예제                      | 2023-01-09 |
-| open   | -                                                 | -          |
+| open   | data sampling 이론과 example                         | 2023-01-10 |
 | open   | -                                                 | -          |
 
 ---
