@@ -185,9 +185,11 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 | closed   | matplotlib 한글 수정과 언어와 OS 구조                       | 2023-01-05 |
 | closed   | 시각화 HTML 만들기 6 (그래프 그리기)                          | 2023-01-05 |
 | closed   | 사이킷런 선형회귀 복습                                      | 2023-01-05 |
-| open   | jquery Example(source URL Stramming)              | 2023-01-09 |
-| open   | MLPClassifier 사용하여 모델링 적용 예제                      | 2023-01-09 |
-| open   | data sampling 이론과 example                         | 2023-01-10 |
+| closed   | jquery Example(source URL Stramming)              | 2023-01-09 |
+| closed   | MLPClassifier 사용하여 모델링 적용 예제                      | 2023-01-09 |
+| closed   | data sampling 이론과 example                         | 2023-01-10 |
+| closed   | 데이터 분석을 위한 차원축소 이론                                | 2023-01-11 |
+| closed   | 차원축소, 차원확대를 위한 투영, 매니폴드 학습 개요와 PCA 함수 사용법         | 2023-01-11 |
 | open   | -                                                 | -          |
 
 ---

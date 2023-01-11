@@ -65,4 +65,13 @@ public class searchController {
 
         return "resultDB/search";
     }
+
+    @PostMapping("onload_test")
+    public String onload_test(
+    ) {
+        return "loading/loading";
+    }
+
+
+
 }
