@@ -83,3 +83,7 @@ h2:hover span:nth-child(2) {
 .text-example {
     align-self: center;
 }
+
+img {
+    width: 400px;
+}
