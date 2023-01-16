@@ -1,1 +1,1 @@
-rootProject.name = "studySpringboot0002"
+rootProject.name = "project_server110_springboot"
