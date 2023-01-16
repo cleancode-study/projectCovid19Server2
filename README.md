@@ -223,7 +223,6 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
     - https://www.youtube.com/watch?v=C_gAwnseXqI
   - 이미지 업로드/다운로드
     - https://www.youtube.com/watch?v=7dmwTbSiudw
-  - 차순위 : 세션과 쿠키와 (교과서 part7)시큐리티
 - nextjs 13 기본인프라
   - 구조
     - https://youtu.be/pRoway0ktZQ
@@ -238,10 +237,12 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
     - https://youtu.be/ZBooPaJOeDU
 - 전처리와 통계이론
   - https://www.youtube.com/watch?v=NCh_kSCYEQw
+- 비지도학습과 클러스터링(분류)
+  - https://youtu.be/g7KianKRHdo
 - 인공지능 대표 모델과 예제
-  - 선형회귀 / tree모델(랜덤포레스트, 라이트GBM) / PCA(차원분석)
-- 머신러닝 모델 검증
-  - 추후 보강
+  - https://youtu.be/ipgSxtABDA8
+- 머신러닝 모델 평가 (24분25초 참고)
+  - https://www.youtube.com/watch?v=xh2Hn5DnOW0
 
 
 
