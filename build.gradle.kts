@@ -40,6 +40,8 @@ dependencies {
 	implementation("org.seleniumhq.selenium:selenium-java")
 	//swagger
 	implementation("org.springdoc:springdoc-openapi-ui:1.6.6")
+	//
+	implementation("com.google.code.gson:gson:2.9.0")
 }
 
 tasks.withType<Test> {

@@ -154,56 +154,56 @@ x, y를 회귀 데이터, 선(산점 범위)을 분류 데이터
 
 #### todoList
 
-| 완료     | 작업내용                                                       | 완료날짜       |
-|--------|------------------------------------------------------------|------------|
-| closed | data.go.kr 공공데이터 요청                                        | 2022-12-12 |
-| closed | Java 언어로 api데이터 받기 샘플코드 완성                                 | 2022-12-12 |
-| closed | github가입과 관리                                               | 2022-12-12 |
-| closed | readme.md 개발문서 작성                                          | 2022-12-13 |
-| closed | server110과 server210 @GetMapping 연결 구조 설계                  | 2022-12-13 |
-| closed | DB에 데이터 저장하기 sample                                        | 2022-12-13 |
-| closed | DB에 데이터 불러오기 1 (data.go.kr 데이터)                            | 2022-12-14 |
-| closed | CSV web link 불러와서 URL 주소 전달하는 @RestController 만들기          | 2022-12-14 |
-| closed | DB에 검색내용, IP, 시간을 저장하는 Entity Table만들기                     | 2022-12-14 |
-| closed | DB에 데이터 불러오기 2 (검색내용 불러오기)                                 | 2022-12-14 |
-| closed | 시각화 HTML 만들기 1,2 (migration:이동)                            | 2022-12-15 |
-| closed | flask과 springboot 연동                                       | 2022-12-15 |
-| closed | 시각화 페이지 URL 전달하는 API 만들기 (route CSV)                       | 2022-12-16 |
-| closed | 포트폴리오 목록 정하기 / 개발자 용어 정리                                   | 2022-12-16 |
-| closed | 시각화 HTML 만들기 3 (그래프 그리기)                                   | 2022-12-16 |
-| closed | collection framwork 데이터 타입 정립 (java = python)              | 2022-12-19 |
-| closed | pandas 활용하여 데이터 정규화                                        | 2022-12-19 |
-| closed | 시계열 분석이 완료된 통계 데이터를 받아서 spring 그래프 출력하기                    | 2022-12-19 |
-| closed | Dash example                                               | 2022-12-20 |
-| closed | 검색 내용 출력 기능                                                | 2022-12-20 |
-| closed | cloudType 활용한 서비스 배포                                       | 2022-12-29 |
-| closed | GCP를 활용한 클라우드 환경 구성                                        | 2022-12-30 |
-| closed | 타이포그래픽으로 표현한 springboot 데이터 출력                             | 2022-12-30 |
-| closed | 프로젝트 문서 작성법                                                | 2023-01-02 |
-| closed | 2차원 데이터 구조의 튜플, 상관계수, 차원변환                                 | 2023-01-03 |
-| closed | java 어노테이션과 python 데코레이션 활용                                | 2023-01-03 |
-| closed | Dash와 flask 매개변수 전달                                        | 2023-01-03 |
-| closed | 데이터 전처리에 필요한 이론과 사이킷런 함수                                   | 2023-01-04 |
-| closed | 셀레니움 페이지에서 자바스크립트 코드 추가 실행                                 | 2023-01-04 |
-| closed | 자바, 파이썬 유닛테스트 코드 작성법                                       | 2023-01-05 |
-| closed | 사이킷런 스케일링 예시 진행                                            | 2023-01-05 |
-| closed | matplotlib 한글 수정과 언어와 OS 구조                                | 2023-01-05 |
-| closed | 시각화 HTML 만들기 6 (그래프 그리기)                                   | 2023-01-05 |
-| closed | 사이킷런 선형회귀 복습                                               | 2023-01-05 |
-| closed | jquery Example(source URL Stramming)                       | 2023-01-09 |
-| closed | MLPClassifier 사용하여 모델링 적용 예제                               | 2023-01-09 |
-| closed | data sampling 이론과 example                                  | 2023-01-10 |
-| closed | 데이터 분석을 위한 차원축소 이론                                         | 2023-01-11 |
-| closed | 차원축소, 차원확대를 위한 투영, 매니폴드 학습 개요와 PCA 함수 사용법                  | 2023-01-11 |
-| closed | 피어슨 상관계수로 피처끼리 관계 파악                                       | 2023-01-12 |
-| closed | 스그모이드 함수 개론 (소프트맥스, 렐루 함수 포함)                              | 2023-01-13 |
-| closed | OpenCV 이미지 분석 개론                                           | 2023-01-13 |
-| closed | 개개인별 필요한 이론과 기술 강의 정리 (동영상(유튜브 녹화), pdf(구글 클라우드), 교재목차 기반) | 2023-01-16 |
-| closed | 빅데이터, CS이론 정리 (용어 기준)                                      | 2023-01-16          |
-| open   | -                                                          | -          |
-| open   | 개개인별 포트폴리오에 맞춘 readme(또는 ppt)파일 가이드 작성                     | -          |
-| open   | 개개인별 포트폴리오와 면접 준비에 맞춘 트러블슈팅 기재                             | -          |
-| open   | 개개인별 포트폴리오를 취업에 용이한 유사경험, 실무기술 적용 및 작성하여 마무리               | -          |
+| 완료         | 작업내용                                                       | 완료날짜     |
+|------------|------------------------------------------------------------|----------|
+| closed     | data.go.kr 공공데이터 요청                                        | 2022-12-12 |
+| closed     | Java 언어로 api데이터 받기 샘플코드 완성                                 | 2022-12-12 |
+| closed     | github가입과 관리                                               | 2022-12-12 |
+| closed     | readme.md 개발문서 작성                                          | 2022-12-13 |
+| closed     | server110과 server210 @GetMapping 연결 구조 설계                  | 2022-12-13 |
+| closed     | DB에 데이터 저장하기 sample                                        | 2022-12-13 |
+| closed     | DB에 데이터 불러오기 1 (data.go.kr 데이터)                            | 2022-12-14 |
+| closed     | CSV web link 불러와서 URL 주소 전달하는 @RestController 만들기          | 2022-12-14 |
+| closed     | DB에 검색내용, IP, 시간을 저장하는 Entity Table만들기                     | 2022-12-14 |
+| closed     | DB에 데이터 불러오기 2 (검색내용 불러오기)                                 | 2022-12-14 |
+| closed     | 시각화 HTML 만들기 1,2 (migration:이동)                            | 2022-12-15 |
+| closed     | flask과 springboot 연동                                       | 2022-12-15 |
+| closed     | 시각화 페이지 URL 전달하는 API 만들기 (route CSV)                       | 2022-12-16 |
+| closed     | 포트폴리오 목록 정하기 / 개발자 용어 정리                                   | 2022-12-16 |
+| closed     | 시각화 HTML 만들기 3 (그래프 그리기)                                   | 2022-12-16 |
+| closed     | collection framwork 데이터 타입 정립 (java = python)              | 2022-12-19 |
+| closed     | pandas 활용하여 데이터 정규화                                        | 2022-12-19 |
+| closed     | 시계열 분석이 완료된 통계 데이터를 받아서 spring 그래프 출력하기                    | 2022-12-19 |
+| closed     | Dash example                                               | 2022-12-20 |
+| closed     | 검색 내용 출력 기능                                                | 2022-12-20 |
+| closed     | cloudType 활용한 서비스 배포                                       | 2022-12-29 |
+| closed     | GCP를 활용한 클라우드 환경 구성                                        | 2022-12-30 |
+| closed     | 타이포그래픽으로 표현한 springboot 데이터 출력                             | 2022-12-30 |
+| closed     | 프로젝트 문서 작성법                                                | 2023-01-02 |
+| closed     | 2차원 데이터 구조의 튜플, 상관계수, 차원변환                                 | 2023-01-03 |
+| closed     | java 어노테이션과 python 데코레이션 활용                                | 2023-01-03 |
+| closed     | Dash와 flask 매개변수 전달                                        | 2023-01-03 |
+| closed     | 데이터 전처리에 필요한 이론과 사이킷런 함수                                   | 2023-01-04 |
+| closed     | 셀레니움 페이지에서 자바스크립트 코드 추가 실행                                 | 2023-01-04 |
+| closed     | 자바, 파이썬 유닛테스트 코드 작성법                                       | 2023-01-05 |
+| closed     | 사이킷런 스케일링 예시 진행                                            | 2023-01-05 |
+| closed     | matplotlib 한글 수정과 언어와 OS 구조                                | 2023-01-05 |
+| closed     | 시각화 HTML 만들기 6 (그래프 그리기)                                   | 2023-01-05 |
+| closed     | 사이킷런 선형회귀 복습                                               | 2023-01-05 |
+| closed     | jquery Example(source URL Stramming)                       | 2023-01-09 |
+| closed     | MLPClassifier 사용하여 모델링 적용 예제                               | 2023-01-09 |
+| closed     | data sampling 이론과 example                                  | 2023-01-10 |
+| closed     | 데이터 분석을 위한 차원축소 이론                                         | 2023-01-11 |
+| closed     | 차원축소, 차원확대를 위한 투영, 매니폴드 학습 개요와 PCA 함수 사용법                  | 2023-01-11 |
+| closed     | 피어슨 상관계수로 피처끼리 관계 파악                                       | 2023-01-12 |
+| closed     | 스그모이드 함수 개론 (소프트맥스, 렐루 함수 포함)                              | 2023-01-13 |
+| closed     | OpenCV 이미지 분석 개론                                           | 2023-01-13 |
+| closed     | 개개인별 필요한 이론과 기술 강의 정리 (동영상(유튜브 녹화), pdf(구글 클라우드), 교재목차 기반) | 2023-01-16 |
+| closed     | 빅데이터, CS이론 정리 (용어 기준)                                      | 2023-01-16 |
+| open       | -                                                          | -        |
+| Inprogress | 개개인별 포트폴리오에 맞춘 readme(또는 ppt)파일 가이드 작성                     | 2023-01-17 |
+| Inprogress     | 개개인별 포트폴리오와 면접 준비에 맞춘 트러블슈팅 기재                             | 2023-01-17         |
+| Inprogress     | 개개인별 포트폴리오를 취업에 용이한 유사경험, 실무기술 적용 및 작성하여 마무리               | 2023-01-17         |
 
 
 ---
