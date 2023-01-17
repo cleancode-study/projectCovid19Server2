@@ -38,6 +38,8 @@ dependencies {
 	implementation("org.jsoup:jsoup:1.13.1")
 	//Selenium
 	implementation("org.seleniumhq.selenium:selenium-java")
+	//swagger
+	implementation("org.springdoc:springdoc-openapi-ui:1.6.6")
 }
 
 tasks.withType<Test> {

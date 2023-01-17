@@ -1,13 +1,19 @@
 package com.example.project_server110_springboot.component.scraping;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 
 public class scraping_example {
     public static void main(String[] args) throws IOException {
+
         String URL = "https://map.kakao.com/link/search/수원시청음식점";
         Document doc;
 

@@ -32,7 +32,7 @@ public class restController {
      * @param csvRequest
      * @return String(csvLink)
      */
-    @GetMapping("/csvlink")
+    @GetMapping("/api/csvlink")
     public String scvlink(@RequestParam(value = "csvRequest")String csvRequest) {
         //http://localhost:8090/csvlink?csvRequest=covid19
         String resutText = "null";
@@ -86,7 +86,7 @@ public class restController {
     }
 
     //String으로 전달
-    @GetMapping("/restExample")
+    @GetMapping("/api/restExample")
     public String restExample() {
         return "나는 김준석";
     }
@@ -97,7 +97,7 @@ public class restController {
     //4. Integer return 숫자 = 클라이언트는 문자열
 
     //Entity(인스턴스)로 전달
-    @GetMapping("entityExample")
+    @GetMapping("/api/entityExample")
     public Object entityExample() {
         entityExample result = new entityExample(10L, "김준석");
         entityExample result1 = new entityExample(10L, "박준석");
